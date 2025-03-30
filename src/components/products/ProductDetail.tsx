@@ -1,0 +1,135 @@
+
+import React, { useState } from "react";
+import { Product } from "@/lib/data";
+import { Button } from "@/components/ui/button";
+import { 
+  Minus, 
+  Plus, 
+  ShoppingCart,
+  Truck,
+  RotateCcw,
+  CheckCircle
+} from "lucide-react";
+import { useCart } from "@/context/CartContext";
+
+interface ProductDetailProps {
+  product: Product;
+}
+
+const ProductDetail = ({ product }: ProductDetailProps) => {
+  const [quantity, setQuantity] = useState(1);
+  const [currentImage, setCurrentImage] = useState(0);
+  const { addToCart } = useCart();
+  
+  const handleDecreaseQuantity = () => {
+    setQuantity((prev) => (prev > 1 ? prev - 1 : 1));
+  };
+
+  const handleIncreaseQuantity = () => {
+    setQuantity((prev) => (prev < product.inventory ? prev + 1 : prev));
+  };
+
+  const handleAddToCart = () => {
+    addToCart(product, quantity);
+  };
+
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16">
+      <div className="space-y-4">
+        <div className="aspect-square overflow-hidden rounded-md border">
+          <img
+            src={product.images[currentImage]}
+            alt={product.name}
+            className="h-full w-full object-cover"
+          />
+        </div>
+        
+        {product.images.length > 1 && (
+          <div className="flex gap-2 overflow-auto pb-2">
+            {product.images.map((image, index) => (
+              <button
+                key={index}
+                className={`relative aspect-square w-20 overflow-hidden rounded-md border ${
+                  index === currentImage ? "ring-2 ring-store-accent" : ""
+                }`}
+                onClick={() => setCurrentImage(index)}
+              >
+                <img
+                  src={image}
+                  alt={`${product.name} - Image ${index + 1}`}
+                  className="h-full w-full object-cover"
+                />
+              </button>
+            ))}
+          </div>
+        )}
+      </div>
+
+      <div className="space-y-6">
+        <div>
+          <h1 className="text-2xl font-medium md:text-3xl">{product.name}</h1>
+          <p className="mt-1 text-xl font-medium">${product.price.toFixed(2)}</p>
+        </div>
+
+        <div className="space-y-1">
+          <p className="text-sm text-muted-foreground">
+            {product.inventory > 0 
+              ? `In stock (${product.inventory} available)` 
+              : "Out of stock"}
+          </p>
+          <p className="text-base">{product.description}</p>
+        </div>
+
+        <div className="flex flex-col gap-4">
+          <div className="flex items-center">
+            <Button
+              variant="outline"
+              size="icon"
+              onClick={handleDecreaseQuantity}
+              disabled={quantity === 1}
+            >
+              <Minus size={16} />
+              <span className="sr-only">Decrease quantity</span>
+            </Button>
+            <span className="w-12 text-center">{quantity}</span>
+            <Button
+              variant="outline"
+              size="icon"
+              onClick={handleIncreaseQuantity}
+              disabled={quantity >= product.inventory}
+            >
+              <Plus size={16} />
+              <span className="sr-only">Increase quantity</span>
+            </Button>
+          </div>
+
+          <Button
+            onClick={handleAddToCart}
+            className="w-full"
+            disabled={product.inventory === 0}
+          >
+            <ShoppingCart className="mr-2 h-4 w-4" />
+            Add to Cart
+          </Button>
+        </div>
+
+        <div className="rounded-md bg-muted p-4 space-y-3">
+          <div className="flex items-center gap-2 text-sm">
+            <Truck size={16} className="text-muted-foreground" />
+            <span>Free shipping on orders over $75</span>
+          </div>
+          <div className="flex items-center gap-2 text-sm">
+            <RotateCcw size={16} className="text-muted-foreground" />
+            <span>Free returns within 30 days</span>
+          </div>
+          <div className="flex items-center gap-2 text-sm">
+            <CheckCircle size={16} className="text-muted-foreground" />
+            <span>Sustainably sourced materials</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ProductDetail;
