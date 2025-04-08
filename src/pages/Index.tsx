@@ -1,6 +1,7 @@
 
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
 import ProductGrid from "@/components/products/ProductGrid";
 import { getFeaturedProducts, getCategories } from "@/lib/data";
 import Navbar from "@/components/layout/Navbar";
@@ -17,29 +18,92 @@ const Index = () => {
       <main className="flex-1">
         {/* Hero Section */}
         <section className="relative">
-          <div className="h-[70vh] bg-store-secondary overflow-hidden">
-            <img
-              src="/images/header3.jpeg"
-              alt="Cartoon of three folks with a farm in the background"
-              className="w-full h-full object-cover"
-            />
-          </div>
-          
-          <div className="absolute inset-0 flex items-center">
-            <div className="store-container">
-              <div className="max-w-md p-6 bg-background/90 backdrop-blur-sm rounded-lg">
-                <h1 className="text-4xl font-medium tracking-tight mb-3">
-                  Empowering efficiency
-                </h1>
-                <p className="text-lg mb-6">
-                  Curated products for a more productive farm.
-                </p>
-                <Button asChild size="lg">
-                  <Link to="/products">Shop Now</Link>
-                </Button>
-              </div>
+          <Carousel className="h-[70vh]">
+            <CarouselContent>
+              {/* First Slide */}
+              <CarouselItem>
+                <div className="relative h-full bg-store-secondary overflow-hidden">
+                  <img
+                    src="/images/header3.jpeg"
+                    alt="Cartoon of three folks with a farm in the background"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 flex items-center">
+                    <div className="store-container">
+                      <div className="max-w-md p-6 bg-background/90 backdrop-blur-sm rounded-lg">
+                        <h1 className="text-4xl font-medium tracking-tight mb-3">
+                          Empowering efficiency
+                        </h1>
+                        <p className="text-lg mb-6">
+                          Curated products for a more productive farm.
+                        </p>
+                        <Button asChild size="lg">
+                          <Link to="/products">Shop Now</Link>
+                        </Button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </CarouselItem>
+              
+              {/* Second Slide */}
+              <CarouselItem>
+                <div className="relative h-full bg-store-secondary overflow-hidden">
+                  <img
+                    src="/images/header2.jpeg"
+                    alt="Farm equipment in a field"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 flex items-center">
+                    <div className="store-container">
+                      <div className="max-w-md p-6 bg-background/90 backdrop-blur-sm rounded-lg ml-auto">
+                        <h1 className="text-4xl font-medium tracking-tight mb-3">
+                          Quality equipment
+                        </h1>
+                        <p className="text-lg mb-6">
+                          Durable tools built to last for generations.
+                        </p>
+                        <Button asChild size="lg">
+                          <Link to="/products/tools">View Tools</Link>
+                        </Button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </CarouselItem>
+              
+              {/* Third Slide */}
+              <CarouselItem>
+                <div className="relative h-full bg-store-secondary overflow-hidden">
+                  <img
+                    src="/images/header1.jpeg"
+                    alt="Sustainable farming practices"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 flex items-center">
+                    <div className="store-container">
+                      <div className="max-w-md p-6 bg-background/90 backdrop-blur-sm rounded-lg">
+                        <h1 className="text-4xl font-medium tracking-tight mb-3">
+                          Sustainable solutions
+                        </h1>
+                        <p className="text-lg mb-6">
+                          Eco-friendly products for the modern farmer.
+                        </p>
+                        <Button asChild size="lg">
+                          <Link to="/products/eco">Explore</Link>
+                        </Button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </CarouselItem>
+            </CarouselContent>
+            
+            <div className="absolute z-10 bottom-4 left-0 right-0 flex justify-center gap-2">
+              <CarouselPrevious className="relative -left-0 translate-y-0 mx-1" />
+              <CarouselNext className="relative -right-0 translate-y-0 mx-1" />
             </div>
-          </div>
+          </Carousel>
         </section>
 
         {/* Featured Products */}
