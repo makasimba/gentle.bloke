@@ -28,11 +28,11 @@ const Index = () => {
                     alt="Cartoon of three folks with a farm in the background"
                     className="w-full h-full object-cover"
                   />
-                  <div className="absolute inset-0 flex items-center">
+                  <div className="pl-10 absolute inset-0 flex items-center">
                     <div className="store-container">
                       <div className="max-w-md p-6 bg-background/90 backdrop-blur-sm rounded-lg">
                         <h1 className="text-4xl font-medium tracking-tight mb-3">
-                          Empowering efficiency
+                          Peak Productivity
                         </h1>
                         <p className="text-lg mb-6">
                           Curated products for a more productive farm.
@@ -54,7 +54,7 @@ const Index = () => {
                     alt="Farm equipment in a field"
                     className="w-full h-full object-cover"
                   />
-                  <div className="absolute inset-0 flex items-center">
+                  <div className="pr-10 absolute inset-0 flex items-center">
                     <div className="store-container">
                       <div className="max-w-md p-6 bg-background/90 backdrop-blur-sm rounded-lg ml-auto">
                         <h1 className="text-4xl font-medium tracking-tight mb-3">
@@ -80,7 +80,7 @@ const Index = () => {
                     alt="Sustainable farming practices"
                     className="w-full h-full object-cover"
                   />
-                  <div className="absolute inset-0 flex items-center">
+                  <div className="absolute pl-10 inset-0 flex items-center">
                     <div className="store-container">
                       <div className="max-w-md p-6 bg-background/90 backdrop-blur-sm rounded-lg">
                         <h1 className="text-4xl font-medium tracking-tight mb-3">
