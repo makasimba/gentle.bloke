@@ -22,7 +22,7 @@ const Index = () => {
         <section className="relative">
           <div className="h-[70vh] bg-store-secondary overflow-hidden">
             <img
-              src="public/images/header3.jpeg"
+              src="/images/header3.jpeg"
               alt="Cartoon of three folks with a farm in the background"
               className="w-full h-full object-cover"
             />
@@ -49,26 +49,6 @@ const Index = () => {
         <section className="py-16">
           <div className="store-container">
             <ProductGrid products={featuredProducts} title="Featured Products" />
-          </div>
-        </section>
-
-        {/* Categories Section */}
-        <section className="py-16 bg-muted/30">
-          <div className="store-container">
-            <h2 className="text-2xl font-medium mb-8 text-center">Shop by Category</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-              {categories.map((category) => (
-                <Link
-                  key={category}
-                  to={`/products?category=${category}`}
-                  className="group relative overflow-hidden rounded-lg aspect-square border hover:shadow-md transition-shadow"
-                >
-                  <div className="absolute inset-0 bg-foreground/50 group-hover:bg-foreground/40 transition-colors flex items-center justify-center text-white text-xl font-medium">
-                    {category}
-                  </div>
-                </Link>
-              ))}
-            </div>
           </div>
         </section>
 
