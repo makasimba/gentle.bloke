@@ -75,7 +75,7 @@ const Navbar = () => {
               <img
                 src="/images/l1.jpeg"
                 alt="ToolMinda Logo"
-                className="h-10 w-auto"
+                className="h-12 w-auto"
               />
               <span className="text-xl font-semi-bold tracking-tight hidden sm:inline">ToolMinda</span>
             </Link>
@@ -85,10 +85,9 @@ const Navbar = () => {
           <div className="hidden md:flex flex-1 justify-center px-4">
             <div className="flex items-center w-full max-w-xl">
               <div className="relative flex-1">
-                <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500" size={20} />
                 <Input
-                  placeholder="Search ToolMinda"
-                  className="pl-10 bg-green-100 border-0 h-10 focus-visible:ring-1 focus-visible:ring-green-300"
+                  placeholder="Search For Your Tools"
+                  className="pl-2 bg-green-100 border-0 h-10 focus-visible:ring-1 focus-visible:ring-green-300"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   onKeyDown={(e) => e.key === "Enter" && handleSearch()}
