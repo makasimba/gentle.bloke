@@ -62,7 +62,7 @@ const Navbar = () => {
         </div>
         
         <Link to="/" className="flex items-center gap-2">
-          <span className="text-xl font-bold tracking-tight">MINIMAL</span>
+          <span className="text-xl font-bold tracking-tight">ToolMinda</span>
         </Link>
         
         <nav className="hidden md:flex items-center space-x-6">

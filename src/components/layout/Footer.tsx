@@ -8,9 +8,9 @@ const Footer = () => {
       <div className="store-container py-10 md:py-12">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           <div className="space-y-3">
-            <h3 className="text-lg font-medium">MINIMAL</h3>
+            <h3 className="text-lg font-medium">ToolMinda</h3>
             <p className="text-sm text-muted-foreground">
-              Quality minimalist products for your everyday life.
+              Quality products for your everyday life.
             </p>
           </div>
           
@@ -147,20 +147,20 @@ const Footer = () => {
         
         <div className="mt-10 border-t pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-xs text-muted-foreground">
-            © {new Date().getFullYear()} MINIMAL. All rights reserved.
+            © {new Date().getFullYear()} ToolMinda. All rights reserved.
           </p>
           <div className="flex gap-4">
             <Link 
               to="#" 
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
-              Instagram
+              
             </Link>
             <Link 
               to="#" 
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
-              Twitter
+              
             </Link>
             <Link 
               to="#" 
