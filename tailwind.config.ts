@@ -55,9 +55,9 @@ export default {
 				},
 				// Store specific colors
 				store: {
-					primary: '#333333',
+					primary: '#2E7D32',
 					secondary: '#F5F5F5',
-					accent: '#0EA5E9',
+					accent: '#66BB6A',
 				}
 			},
 			borderRadius: {
