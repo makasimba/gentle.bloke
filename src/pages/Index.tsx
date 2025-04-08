@@ -22,8 +22,8 @@ const Index = () => {
         <section className="relative">
           <div className="h-[70vh] bg-store-secondary overflow-hidden">
             <img
-              src="https://images.unsplash.com/photo-1556702635-2c37e4c97928?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-              alt="Minimalist home interior"
+              src="public/images/header3.jpeg"
+              alt="Cartoon of three folks with a farm in the background"
               className="w-full h-full object-cover"
             />
           </div>
@@ -32,10 +32,10 @@ const Index = () => {
             <div className="store-container">
               <div className="max-w-md p-6 bg-background/90 backdrop-blur-sm rounded-lg">
                 <h1 className="text-4xl font-medium tracking-tight mb-3">
-                  Minimalist Living
+                  Empowering efficiency
                 </h1>
                 <p className="text-lg mb-6">
-                  Curated products for a more intentional lifestyle.
+                  Curated products for a more productive farm.
                 </p>
                 <Button asChild size="lg">
                   <Link to="/products">Shop Now</Link>
