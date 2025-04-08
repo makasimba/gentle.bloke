@@ -93,43 +93,6 @@ const Navbar = () => {
             </Link>
           ))}
         </nav>
-        
-        <div className="flex items-center gap-2">
-          <Sheet>
-            <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="hidden md:flex">
-                <Search size={20} />
-                <span className="sr-only">Search</span>
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="top" className="sm:max-w-xl mx-auto">
-              <div className="flex flex-col gap-4 pt-4">
-                <div className="flex items-center gap-2">
-                  <Input
-                    placeholder="Search for products..."
-                    className="flex-1"
-                  />
-                  <Button>Search</Button>
-                </div>
-              </div>
-            </SheetContent>
-          </Sheet>
-          
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={toggleCart}
-            className="relative"
-          >
-            <ShoppingCart size={20} />
-            {itemCount > 0 && (
-              <span className="absolute -top-2 -right-2 bg-store-accent text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
-                {itemCount}
-              </span>
-            )}
-            <span className="sr-only">Open cart</span>
-          </Button>
-        </div>
       </div>
     </header>
   );
