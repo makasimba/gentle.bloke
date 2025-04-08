@@ -62,7 +62,12 @@ const Navbar = () => {
         </div>
         
         <Link to="/" className="flex items-center gap-2">
-          <span className="text-xl font-bold tracking-tight">ToolMinda</span>
+          <img
+            src="images/l1.jpeg"
+            alt="ToolMinda Logo"
+            className="h-12 w-auto"
+          />
+          <span className="text-xl font-bold tracking-tight"></span>
         </Link>
         
         <nav className="hidden md:flex items-center space-x-6">
