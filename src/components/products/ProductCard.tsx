@@ -39,7 +39,14 @@ const ProductCard = ({ product }: ProductCardProps) => {
         </div>
         
         <div className="flex items-center justify-between mt-auto">
-          <span className="font-medium">${product.price.toFixed(2)}</span>
+          <div className="flex flex-col">
+            <span className="font-medium">${product.price.toFixed(2)}</span>
+            {product.previousPrice && (
+              <span className="text-sm text-muted-foreground line-through">
+                ${product.previousPrice.toFixed(2)}
+              </span>
+            )}
+          </div>
           <Button 
             onClick={() => addToCart(product)} 
             size="sm" 
