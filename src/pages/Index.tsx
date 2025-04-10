@@ -6,25 +6,29 @@ import ProductGrid from "@/components/products/ProductGrid";
 import { getFeaturedProducts, getCategories } from "@/lib/data";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import Autoplay from 'embla-carousel-autoplay';
+import type { EmblaCarouselType } from 'embla-carousel';
 
 const Index = () => {
   const featuredProducts = getFeaturedProducts();
   const categories = getCategories();
-  const [api, setApi] = useState<any>(null);
-
-  const autoplay = useCallback(() => {
-    if (api) {
-      api.scrollNext();
-    }
-  }, [api]);
+  const [api, setApi] = useState<EmblaCarouselType | null>(null);
+  const [autoplayPlugin] = useState(() => 
+    Autoplay({ 
+      delay: 5000,
+      stopOnInteraction: true,
+      stopOnMouseEnter: true,
+      rootNode: (emblaRoot) => emblaRoot.parentElement,
+      playOnInit: true
+    })
+  );
 
   useEffect(() => {
     if (!api) return;
-
-    const interval = setInterval(autoplay, 5000); // Switch slides every 5 seconds
-
-    return () => clearInterval(interval);
-  }, [api, autoplay]);
+    
+    // Ensure autoplay starts
+    api.reInit();
+  }, [api]);
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -38,12 +42,13 @@ const Index = () => {
             setApi={setApi}
             opts={{
               loop: true,
+              align: "start",
+              skipSnaps: false,
+              dragFree: false,
             }}
+            plugins={[autoplayPlugin]}
           >
-            <CarouselContent
-              onMouseEnter={() => api?.stop()}
-              onMouseLeave={() => api?.start()}
-            >
+            <CarouselContent>
               {/* First Slide */}
               <CarouselItem>
                 <div className="relative h-full bg-store-secondary overflow-hidden">
