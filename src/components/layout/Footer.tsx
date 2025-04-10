@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="space-y-3">
             <h3 className="text-lg font-medium">ToolMinda</h3>
             <p className="text-sm text-muted-foreground">
-              Quality products for your everyday life.
+              Empowering farmers with high quality tools and machinery.
             </p>
           </div>
           
@@ -30,7 +30,7 @@ const Footer = () => {
                   to="/products?category=Lighting" 
                   className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  Lighting
+                  Spares
                 </Link>
               </li>
               <li>
@@ -38,7 +38,7 @@ const Footer = () => {
                   to="/products?category=Kitchen" 
                   className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  Kitchen
+                  MCs
                 </Link>
               </li>
               <li>
@@ -46,7 +46,7 @@ const Footer = () => {
                   to="/products?category=Home Decor" 
                   className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  Home Decor
+                  Dairy
                 </Link>
               </li>
               <li>
@@ -54,7 +54,7 @@ const Footer = () => {
                   to="/products?category=Bedding" 
                   className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  Bedding
+                  Cutters
                 </Link>
               </li>
             </ul>
