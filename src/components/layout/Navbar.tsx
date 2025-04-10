@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import {
   Sheet,
   SheetContent,
@@ -10,18 +9,10 @@ import {
   SheetClose,
 } from "@/components/ui/sheet";
 import { getCategories } from "@/lib/data";
+import SearchBar from "./SearchBar";
 
 const Navbar = () => {
   const categories = getCategories();
-  const [searchQuery, setSearchQuery] = useState("");
-  const [location, setLocation] = useState("United Kingdom");
-
-  const handleSearch = () => {
-    if (searchQuery.trim()) {
-      // Implement search functionality
-      console.log("Searching for:", searchQuery, "in location:", location);
-    }
-  };
 
   return (
     <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur">
@@ -83,33 +74,8 @@ const Navbar = () => {
 
           {/* Search Bar - Centered */}
           <div className="hidden md:flex flex-1 justify-center px-4">
-            <div className="flex items-center w-full max-w-xl">
-              <div className="relative flex-1">
-                <Input
-                  placeholder="Search For Your Tools"
-                  className="pl-2 bg-green-100 border-0 h-10 focus-visible:ring-1 focus-visible:ring-green-300"
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  onKeyDown={(e) => e.key === "Enter" && handleSearch()}
-                />
-              </div>
-              
-              <div className="w-40 ml-2">
-                <Button 
-                  variant="outline" 
-                  className="h-10 w-full bg-white border border-gray-200 flex justify-between items-center px-4 font-normal hover:bg-gray-50"
-                >
-                  <span>{location}</span>
-                  <span className="material-icons text-xs">▼</span>
-                </Button>
-              </div>
-              
-              <Button 
-                onClick={handleSearch}
-                className="bg-green-500 hover:bg-green-600 text-white h-10 ml-2"
-              >
-                <Search size={18} />
-              </Button>
+            <div className="w-full max-w-xl">
+              <SearchBar />
             </div>
           </div>
 
