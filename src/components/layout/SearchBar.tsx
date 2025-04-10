@@ -30,7 +30,7 @@ const SearchBar = () => {
 
   {/* Location Selector */}
   <Select value={location} onValueChange={setLocation}>
-    <SelectTrigger className="w-full md:w-44 bg-white border border-gray-200 hover:border-green-400 focus:border-green-400 focus:ring-1 focus:ring-green-200 rounded-md transition-all duration-200">
+  <SelectTrigger className="w-full md:w-44 bg-white border border-gray-200 hover:border-green-400 focus:border-green-400 focus:ring-1 focus:ring-green-200 rounded-md transition-all duration-200">
       <div className="flex items-center">
         <MapPin className="mr-2 h-4 w-4 text-gray-500" />
         <SelectValue placeholder="Location" className="text-gray-700" />
@@ -44,7 +44,6 @@ const SearchBar = () => {
         { value: "ms", label: "Masvingo" },
         { value: "kk", label: "Kwekwe" },
         { value: "gr", label: "Gweru" },
-        { value: "vc", label: "Victoria Falls" },
       ].map((item) => (
         <SelectItem 
           key={item.value} 
