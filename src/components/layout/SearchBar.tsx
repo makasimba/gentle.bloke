@@ -48,7 +48,7 @@ const SearchBar = () => {
         <SelectItem 
           key={item.value} 
           value={item.value}
-          className="px-4 py-2 hover:bg-green-50 text-gray-700 cursor-pointer transition-colors duration-150"
+           className="px-8 py-2 m-1 hover:bg-green-50 hover:text-green-700 rounded focus:bg-green-100 focus:text-green-800 cursor-pointer transition-all duration-150 relative"
         >
           <div className="flex items-center">
             {item.label}
