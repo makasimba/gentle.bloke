@@ -1,4 +1,4 @@
-
+import React, { useState, useEffect, useCallback } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
@@ -10,6 +10,21 @@ import Footer from "@/components/layout/Footer";
 const Index = () => {
   const featuredProducts = getFeaturedProducts();
   const categories = getCategories();
+  const [api, setApi] = useState<any>(null);
+
+  const autoplay = useCallback(() => {
+    if (api) {
+      api.scrollNext();
+    }
+  }, [api]);
+
+  useEffect(() => {
+    if (!api) return;
+
+    const interval = setInterval(autoplay, 5000); // Switch slides every 5 seconds
+
+    return () => clearInterval(interval);
+  }, [api, autoplay]);
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -18,8 +33,17 @@ const Index = () => {
       <main className="flex-1">
         {/* Hero Section */}
         <section className="relative">
-          <Carousel className="h-[70vh]">
-            <CarouselContent>
+          <Carousel 
+            className="h-[70vh]"
+            setApi={setApi}
+            opts={{
+              loop: true,
+            }}
+          >
+            <CarouselContent
+              onMouseEnter={() => api?.stop()}
+              onMouseLeave={() => api?.start()}
+            >
               {/* First Slide */}
               <CarouselItem>
                 <div className="relative h-full bg-store-secondary overflow-hidden">
