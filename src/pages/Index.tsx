@@ -154,7 +154,7 @@ const Index = () => {
               <div>
                 <h2 className="text-3xl font-medium mb-4">Our Philosophy</h2>
                 <p className="text-muted-foreground mb-6">
-                  We believe in quality over quantity. Each product in our store is thoughtfully designed and crafted to bring lasting value to your everyday life. We prioritize sustainable materials and ethical manufacturing processes to minimize our environmental impact.
+                At our core, we believe every farm deserves reliable, enduring equipment. Our machines, tools, and supplies are designed specifically for small to medium scale farms, engineered for performance season after season. Partnering with sustainably minded suppliers, we deliver purpose-built solutions that enhance your productivity while caring for the land. With a focus on robust design and timeless functionality, our equipment empowers you to cultivate success today and for years to come.
                 </p>
                 <p className="text-muted-foreground mb-6">
                   Our curation focuses on timeless aesthetics that won't go out of style, functionality that enhances your daily routines, and durability that ensures these items will serve you for years to come.
