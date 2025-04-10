@@ -30,6 +30,11 @@ const Index = () => {
     api.reInit();
   }, [api]);
 
+  const handleMouseLeave = useCallback(() => {
+    if (!api) return;
+    api.reInit();
+  }, [api]);
+
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
@@ -48,7 +53,7 @@ const Index = () => {
             }}
             plugins={[autoplayPlugin]}
           >
-            <CarouselContent>
+            <CarouselContent onMouseLeave={handleMouseLeave}>
               {/* First Slide */}
               <CarouselItem>
                 <div className="relative h-full bg-store-secondary overflow-hidden">
