@@ -50,11 +50,11 @@ const ProductCard = ({ product }: ProductCardProps) => {
           <Button 
             onClick={() => addToCart(product)} 
             size="sm" 
-            className="rounded-full flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
-            variant="outline"
+            className="absolute bottom-3 right-3 bg-white text-green-600 hover:bg-green-50 hover:text-green-700 border border-green-200 shadow-sm w-8 h-8 p-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transform group-hover:translate-y-0 translate-y-2 transition-all duration-200"
+            variant="ghost"
+            aria-label="Add to Cart"
           >
-            <ShoppingCart size={14} />
-            <span className="sr-only md:not-sr-only md:inline-block">Add to Cart</span>
+            <ShoppingCart size={18} strokeWidth={2} />
           </Button>
         </div>
       </div>
