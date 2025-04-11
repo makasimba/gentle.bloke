@@ -166,7 +166,6 @@ const Footer = () => {
               to="#" 
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
-              Pinterest
             </Link>
           </div>
         </div>

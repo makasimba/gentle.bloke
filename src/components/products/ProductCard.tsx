@@ -12,6 +12,7 @@ interface ProductCardProps {
 const ProductCard = ({ product }: ProductCardProps) => {
   const { addToCart } = useCart();
   const [showTooltip, setShowTooltip] = useState(false);
+  const [isButtonHovered, setIsButtonHovered] = useState(false);
 
   return (
     <div className="group relative rounded-lg overflow-hidden border border-gray-200 hover:border-gray-300 hover:shadow-md transition-all duration-300 flex flex-col min-h-[420px] bg-white">
@@ -56,16 +57,22 @@ const ProductCard = ({ product }: ProductCardProps) => {
               </span>
             )}
           </div>
-          
-          <div className="relative">
+
+          <div className="relative hidden">
             <Button 
               onClick={() => addToCart(product)} 
               size="sm" 
-              className="bg-white text-green-600 hover:bg-green-50 hover:text-green-700 border border-green-200 shadow-sm rounded-full w-9 h-9 p-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transform group-hover:translate-y-0 translate-y-2 transition-all duration-300"
+              className={`bg-white border border-green-200 shadow-sm rounded-full w-9 h-9 p-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transform group-hover:translate-y-0 translate-y-2 transition-all duration-300 ${isButtonHovered ? 'text-green-800 hover:bg-green-50' : 'text-green-600 hover:bg-green-50 hover:text-green-700'}`}
               variant="ghost"
               aria-label="Add to Cart"
-              onMouseEnter={() => setShowTooltip(true)}
-              onMouseLeave={() => setShowTooltip(false)}
+              onMouseEnter={() => {
+                setShowTooltip(true);
+                setIsButtonHovered(true);
+              }}
+              onMouseLeave={() => {
+                setShowTooltip(false);
+                setIsButtonHovered(false);
+              }}
             >
               <ShoppingCart size={18} strokeWidth={2} />
             </Button>

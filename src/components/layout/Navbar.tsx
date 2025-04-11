@@ -62,9 +62,9 @@ const Navbar = () => {
 
           {/* Logo */}
           <div className="flex items-center">
-            <Link to="/" className="flex items-center gap-2">
+            <Link to="/" className="flex items-center gap-1">
               <img
-                src="/images/l1.jpeg"
+                src="/images/toolmindavector6.svg"
                 alt="ToolMinda Logo"
                 className="h-12 w-auto"
               />
