@@ -66,7 +66,7 @@ const Navbar = () => {
               <img
                 src="/images/toolmindavector6.svg"
                 alt="ToolMinda Logo"
-                className="h-12 w-auto"
+                className="h-12 w-full"
               />
               <span className="text-xl font-semi-bold tracking-tight hidden sm:inline">ToolMinda</span>
             </Link>

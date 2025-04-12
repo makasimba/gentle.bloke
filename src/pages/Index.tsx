@@ -154,10 +154,19 @@ const Index = () => {
               <div>
                 <h2 className="text-3xl font-medium mb-4">Our Philosophy</h2>
                 <p className="text-muted-foreground mb-6">
-                At our core, we believe every farm deserves reliable, enduring equipment. Our machines, tools, and supplies are designed specifically for small to medium scale farms, engineered for performance season after season. Partnering with sustainably minded suppliers, we deliver purpose-built solutions that enhance your productivity while caring for the land. With a focus on robust design and timeless functionality, our equipment empowers you to cultivate success today and for years to come.
+                  At our core, we believe every farm deserves reliable, enduring equipment. 
+                  Our machines, tools, and supplies are designed specifically for small to
+                  medium scale farms, engineered for performance season after season. 
+                  Partnering with sustainably minded suppliers, we deliver purpose-built 
+                  solutions that enhance your productivity while caring for the land. With 
+                  a focus on robust design and timeless functionality, our equipment 
+                  empowers you to cultivate success today and for years to come.
                 </p>
                 <p className="text-muted-foreground mb-6">
-                  Our curation focuses on timeless aesthetics that won't go out of style, functionality that enhances your daily routines, and durability that ensures these items will serve you for years to come.
+                  We focus on equipment that works as hard as you do—built for everyday use,
+                  designed to endure, and crafted with practical functionality that fits 
+                  seamlessly into your farming routine. No frills, just tools you can count on, 
+                  season after season.
                 </p>
                 <Button variant="outline" asChild>
                   <Link to="/products">Explore Our Collection</Link>
@@ -166,7 +175,7 @@ const Index = () => {
               <div className="aspect-square overflow-hidden rounded-lg">
                 <img
                   src="public/images/philosophy__image.jpeg"
-                  alt="Minimalist workspace"
+                  alt="Farm Machinery"
                   className="w-full h-full object-cover"
                 />
               </div>
