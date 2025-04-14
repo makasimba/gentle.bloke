@@ -52,8 +52,8 @@ export const products: Product[] = [
     id: "3",
     name: "Double Barrel Milking Machine",
     description: "Engineered for efficiency, this double barrel milking machine is ideal for dairy farms with higher output needs. It allows simultaneous milking of two cows, cutting down milking time while maintaining animal comfort and hygiene. Built with robust components for long-term use, it's a smart investment for scaling up your dairy operations.",    
-    price: 1289,
-    previousPrice: 999,
+    price: 999,
+    previousPrice: 1289,
     images: [
       "/images/s2.webp",
       "/images/s2_detail.webp",
