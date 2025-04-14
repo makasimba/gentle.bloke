@@ -19,13 +19,12 @@ export interface CartItem {
 export const products: Product[] = [
   {
     id: "1",
-    name: "Minimalist Desk Lamp",
+    name: "Single Barrel Milking Machine",
     description: "A sleek, adjustable desk lamp with warm LED lighting and touch controls. Perfect for your workspace or bedside table.",
     price: 89.99,
     previousPrice: 119.99,
     images: [
-      "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+      "public/images/s1.webp",
     ],
     category: "",
     featured: true,
@@ -33,26 +32,28 @@ export const products: Product[] = [
   },
   {
     id: "2",
-    name: "Ceramic Coffee Mug",
+    name: "Milking Can",
     description: "Handcrafted ceramic mug with minimalist design. Holds 12 oz and is dishwasher and microwave safe.",
     price: 24.99,
     previousPrice: 29.99,
     images: [
-      "https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1578426720323-6d3b67133446?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+      "public/images/MC__III.webp",
+      "public/images/MC__IV.webp",
+      "public/images/MC__V.webp",
+      "public/images/MC__XIII.webp",
     ],
     category: "",
-    inventory: 50
+    inventory: 50,
+    featured: true,
   },
   {
     id: "3",
-    name: "Linen Throw Pillow",
+    name: "Double Barrel Milking Machine",
     description: "Soft, durable linen throw pillow with invisible zipper. Available in various natural colors.",
     price: 39.99,
     previousPrice: 49.99,
     images: [
-      "https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1558997519-83ea9252edf8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+      "public/images/s2.webp"
     ],
     category: "",
     featured: true,
@@ -95,7 +96,7 @@ export const products: Product[] = [
       "https://images.unsplash.com/photo-1523362628745-0c100150b504?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
     ],
     category: "",
-    featured: true,
+    featured: false,
     inventory: 40
   },
   {
