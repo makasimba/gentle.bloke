@@ -41,7 +41,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
             to={`/product/${product.id}`}
             className="block mb-2"
           >
-            <h3 className="font-medium text-gray-800 hover:text-green-700 transition-colors line-clamp-1">{product.name}</h3>
+            <h3 className="font-medium text-gray-800 group-hover:text-store-primary transition-colors duration-300 line-clamp-1">{product.name}</h3>
           </Link>
           <p className="text-sm text-gray-600 mb-4 line-clamp-2 group-hover:line-clamp-3 transition-all duration-300">
             {product.description}
@@ -50,9 +50,9 @@ const ProductCard = ({ product }: ProductCardProps) => {
         
         <div className="flex items-center justify-between mt-auto pt-3 border-t border-gray-100">
           <div className="flex flex-col">
-            <span className="font-semibold text-gray-900">${product.price.toFixed(2)}</span>
+            <span className="font-semibold text-gray-900 group-hover:text-store-primary transition-colors duration-300">${product.price.toFixed(2)}</span>
             {product.previousPrice && (
-              <span className="text-sm text-gray-500 line-through">
+              <span className="text-sm text-gray-500 line-through group-hover:text-gray-400 transition-colors duration-300">
                 ${product.previousPrice.toFixed(2)}
               </span>
             )}
