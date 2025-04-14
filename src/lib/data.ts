@@ -20,7 +20,7 @@ export const products: Product[] = [
   {
     id: "1",
     name: "Single Barrel Milking Machine",
-    description: "A sleek, adjustable desk lamp with warm LED lighting and touch controls. Perfect for your workspace or bedside table.",
+    description: "A reliable and efficient milking solution designed for small to medium dairy farms. This single barrel milking machine streamlines the milking process, reducing labor while ensuring gentle and hygienic extraction. Built for durability and ease of use, it's ideal for farmers seeking consistency, speed, and animal comfort in daily operations.",    
     price: 89.99,
     previousPrice: 119.99,
     images: [
@@ -33,7 +33,7 @@ export const products: Product[] = [
   {
     id: "2",
     name: "Milking Can",
-    description: "Handcrafted ceramic mug with minimalist design. Holds 12 oz and is dishwasher and microwave safe.",
+    description: "A durable, food-grade stainless steel milking can designed for safe and efficient milk collection, storage, and transport. Rust-resistant and easy to clean, it's an essential tool for dairy farmers who value hygiene, longevity, and reliability in their daily operations.",    
     price: 24.99,
     previousPrice: 29.99,
     images: [
@@ -49,7 +49,7 @@ export const products: Product[] = [
   {
     id: "3",
     name: "Double Barrel Milking Machine",
-    description: "Soft, durable linen throw pillow with invisible zipper. Available in various natural colors.",
+    description: "Engineered for efficiency, this double barrel milking machine is ideal for dairy farms with higher output needs. It allows simultaneous milking of two cows, cutting down milking time while maintaining animal comfort and hygiene. Built with robust components for long-term use, it's a smart investment for scaling up your dairy operations.",    
     price: 39.99,
     previousPrice: 49.99,
     images: [
