@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Product } from "@/lib/data";
 import { Button } from "@/components/ui/button";
@@ -8,7 +7,9 @@ import {
   ShoppingCart,
   Truck,
   RotateCcw,
-  CheckCircle
+  CheckCircle,
+  ChevronLeft,
+  ChevronRight
 } from "lucide-react";
 import { useCart } from "@/context/CartContext";
 
@@ -19,6 +20,7 @@ interface ProductDetailProps {
 const ProductDetail = ({ product }: ProductDetailProps) => {
   const [quantity, setQuantity] = useState(1);
   const [currentImage, setCurrentImage] = useState(0);
+  const [isImageLoading, setIsImageLoading] = useState(true);
   const { addToCart } = useCart();
   
   const handleDecreaseQuantity = () => {
@@ -33,30 +35,71 @@ const ProductDetail = ({ product }: ProductDetailProps) => {
     addToCart(product, quantity);
   };
 
+  const handlePreviousImage = () => {
+    setCurrentImage((prev) => 
+      prev === 0 ? product.images.length - 1 : prev - 1
+    );
+    setIsImageLoading(true);
+  };
+
+  const handleNextImage = () => {
+    setCurrentImage((prev) => 
+      prev === product.images.length - 1 ? 0 : prev + 1
+    );
+    setIsImageLoading(true);
+  };
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16">
       <div className="space-y-4">
-        <div className="aspect-square overflow-hidden rounded-md border">
+        <div className="relative aspect-square overflow-hidden rounded-lg border bg-gray-100">
           <img
             src={product.images[currentImage]}
-            alt={product.name}
-            className="h-full w-full object-cover"
+            alt={`${product.name} - Image ${currentImage + 1}`}
+            className={`h-full w-full object-cover transition-opacity duration-300 ${
+              isImageLoading ? 'opacity-0' : 'opacity-100'
+            }`}
+            onLoad={() => setIsImageLoading(false)}
           />
+          
+          {product.images.length > 1 && (
+            <>
+              <button
+                onClick={handlePreviousImage}
+                className="absolute left-2 top-1/2 -translate-y-1/2 rounded-full bg-white/80 p-2 text-gray-800 shadow-sm hover:bg-white focus:outline-none focus:ring-2 focus:ring-store-accent"
+                aria-label="Previous image"
+              >
+                <ChevronLeft size={20} />
+              </button>
+              <button
+                onClick={handleNextImage}
+                className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-white/80 p-2 text-gray-800 shadow-sm hover:bg-white focus:outline-none focus:ring-2 focus:ring-store-accent"
+                aria-label="Next image"
+              >
+                <ChevronRight size={20} />
+              </button>
+            </>
+          )}
         </div>
         
         {product.images.length > 1 && (
-          <div className="flex gap-2 overflow-auto pb-2">
+          <div className="flex gap-2 overflow-auto pb-2 scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-transparent">
             {product.images.map((image, index) => (
               <button
                 key={index}
-                className={`relative aspect-square w-20 overflow-hidden rounded-md border ${
-                  index === currentImage ? "ring-2 ring-store-accent" : ""
+                className={`relative flex-shrink-0 aspect-square w-20 overflow-hidden rounded-md border transition-all duration-200 ${
+                  index === currentImage 
+                    ? "ring-2 ring-store-accent" 
+                    : "hover:ring-2 hover:ring-store-accent/50"
                 }`}
-                onClick={() => setCurrentImage(index)}
+                onClick={() => {
+                  setCurrentImage(index);
+                  setIsImageLoading(true);
+                }}
               >
                 <img
                   src={image}
-                  alt={`${product.name} - Image ${index + 1}`}
+                  alt={`${product.name} - Thumbnail ${index + 1}`}
                   className="h-full w-full object-cover"
                 />
               </button>
