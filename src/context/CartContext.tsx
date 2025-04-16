@@ -1,7 +1,8 @@
-
 import React, { createContext, useContext, useState, ReactNode } from "react";
 import { CartItem, Product } from "@/lib/data";
 import { toast } from "@/components/ui/use-toast";
+import { Button } from "@/components/ui/button";
+import { ShoppingCart } from "lucide-react";
 
 interface CartContextProps {
   cart: CartItem[];
@@ -74,6 +75,18 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
     toast({
       title: "Added to cart",
       description: `${quantity} ${product.name} added to your cart.`,
+      variant: "success",
+      action: (
+        <Button 
+          variant="outline" 
+          size="sm" 
+          className="bg-white text-green-500 hover:bg-green-50"
+          onClick={() => setIsCartOpen(true)}
+        >
+          <ShoppingCart className="mr-2 h-4 w-4" />
+          View Cart
+        </Button>
+      ),
     });
     
     setIsCartOpen(true);

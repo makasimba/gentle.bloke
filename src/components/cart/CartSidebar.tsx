@@ -11,6 +11,19 @@ const CartSidebar = () => {
   // Get cart state and functions from context
   const { cart, isCartOpen, closeCart, cartTotal, clearCart } = useCart();
 
+  // Function to handle WhatsApp checkout
+  const handleWhatsAppCheckout = () => {
+    const phoneNumber = "+263771718399";
+    const message = encodeURIComponent(
+      `Hi! I would like to place an order:\n\n${cart
+        .map((item) => `${item.product.name} x${item.quantity}`)
+        .join("\n")}\n\nTotal: $${cartTotal.toFixed(2)}`
+    );
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+    window.open(whatsappUrl, "_blank");
+    closeCart();
+  };
+
   // Don't render anything if cart is closed
   if (!isCartOpen) {
     return null;
@@ -79,10 +92,11 @@ const CartSidebar = () => {
             
             {/* Action buttons */}
             <div className="space-y-2">
-              <Button asChild className="w-full">
-                <Link to="/checkout" onClick={closeCart}>
-                  Checkout
-                </Link>
+              <Button 
+                className="w-full bg-green-500 hover:bg-green-600"
+                onClick={handleWhatsAppCheckout}
+              >
+                Continue with WhatsApp Checkout
               </Button>
               <Button
                 variant="outline"
