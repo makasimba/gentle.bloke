@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -93,6 +92,26 @@ export default {
 				'slide-out-right': {
 					from: { transform: 'translateX(0)' },
 					to: { transform: 'translateX(100%)' }
+				},
+				'badge-appear': {
+					'0%': { 
+						transform: 'scale(0.8)',
+						opacity: '0'
+					},
+					'100%': {
+						transform: 'scale(1)',
+						opacity: '1'
+					}
+				},
+				'count-update': {
+					'0%': { 
+						transform: 'translateY(50%)',
+						opacity: '0'
+					},
+					'100%': {
+						transform: 'translateY(0)',
+						opacity: '1'
+					}
 				}
 			},
 			animation: {
@@ -100,7 +119,9 @@ export default {
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in': 'fade-in 0.3s ease-out',
 				'slide-in-right': 'slide-in-right 0.3s ease-out',
-				'slide-out-right': 'slide-out-right 0.3s ease-out'
+				'slide-out-right': 'slide-out-right 0.3s ease-out',
+				'badge-appear': 'badge-appear 0.2s ease-out',
+				'count-update': 'count-update 0.2s ease-out'
 			}
 		}
 	},

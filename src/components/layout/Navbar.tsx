@@ -120,12 +120,14 @@ const Navbar = () => {
               variant="ghost" 
               size="icon" 
               onClick={toggleCart} 
-              className="relative group transition-all duration-300 hover:bg-emerald-50/80 hover:text-emerald-600 hover:scale-110"
+              className="relative group transition-all duration-300 hover:bg-emerald-50/80 hover:text-emerald-600 hover:scale-105"
             >
-              <ShoppingBag size={20} className="transition-transform duration-300 group-hover:rotate-12" />
+              <ShoppingBag size={20} className="transition-transform duration-300 group-hover:rotate-6" />
               {itemCount > 0 && (
-                <span className="absolute -top-1 -right-1 h-4 w-4 rounded-full bg-emerald-500 text-[10px] font-medium text-white flex items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:bg-emerald-600">
-                  {itemCount}
+                <span className="absolute -top-1 -right-1 min-w-4 h-4 px-1 rounded-md bg-emerald-500/90 text-[10px] font-medium text-white/90 flex items-center justify-center transform transition-all duration-300 group-hover:scale-105 group-hover:bg-emerald-600/90 animate-badge-appear">
+                  <span className="animate-count-update">
+                    {itemCount}
+                  </span>
                 </span>
               )}
               <span className="sr-only">Shopping cart</span>
