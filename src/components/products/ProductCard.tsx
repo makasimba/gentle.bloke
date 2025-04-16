@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Product } from "@/lib/data";
 import { Button } from "@/components/ui/button";
 import { useCart } from "@/context/CartContext";
-import { ShoppingCart } from "lucide-react";
+import { ShoppingBag } from "lucide-react";
 
 interface ProductCardProps {
   product: Product;
@@ -74,7 +74,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
                 setIsButtonHovered(false);
               }}
             >
-              <ShoppingCart size={18} strokeWidth={2} />
+              <ShoppingBag size={18} strokeWidth={2} />
             </Button>
             
             {/* Tooltip */}

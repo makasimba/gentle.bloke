@@ -2,7 +2,7 @@ import React, { createContext, useContext, useState, ReactNode } from "react";
 import { CartItem, Product } from "@/lib/data";
 import { toast } from "@/components/ui/use-toast";
 import { Button } from "@/components/ui/button";
-import { ShoppingCart } from "lucide-react";
+import { ShoppingBag } from "lucide-react";
 
 interface CartContextProps {
   cart: CartItem[];
@@ -83,7 +83,7 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
           className="bg-white/20 text-white hover:bg-white/30 border-white/30 h-8 px-3"
           onClick={() => setIsCartOpen(true)}
         >
-          <ShoppingCart className="mr-1.5 h-3.5 w-3.5" />
+          <ShoppingBag className="mr-1.5 h-3.5 w-3.5" />
           View Cart
         </Button>
       ),
