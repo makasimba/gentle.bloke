@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Product } from "@/lib/data";
 import { Button } from "@/components/ui/button";
 import { 
@@ -25,6 +25,11 @@ const ProductDetail = ({ product }: ProductDetailProps) => {
   const [currentImage, setCurrentImage] = useState(0);
   const [isImageLoading, setIsImageLoading] = useState(true);
   const { addToCart } = useCart();
+  
+  // Scroll to top of page when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   
   // Quantity adjustment handlers
   const handleDecreaseQuantity = () => {
