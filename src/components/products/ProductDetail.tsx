@@ -163,7 +163,7 @@ const ProductDetail = ({ product }: ProductDetailProps) => {
             <Button
               variant="ghost"
               size="icon"
-              className="h-6 w-6 transition-all duration-300 hover:bg-green-50 hover:text-green-600 hover:scale-110 disabled:hover:scale-100 disabled:hover:bg-transparent disabled:hover:text-muted-foreground"
+              className="h-6 w-6 transition-all duration-300 hover:bg-emerald-50/80 hover:text-emerald-600 hover:scale-110 disabled:hover:scale-100 disabled:hover:bg-transparent disabled:hover:text-muted-foreground"
               onClick={handleDecreaseQuantity}
               disabled={quantity <= 1}
             >
@@ -176,7 +176,7 @@ const ProductDetail = ({ product }: ProductDetailProps) => {
             <Button
               variant="ghost"
               size="icon"
-              className="h-6 w-6 transition-all duration-300 hover:bg-green-50 hover:text-green-600 hover:scale-110 disabled:hover:scale-100 disabled:hover:bg-transparent disabled:hover:text-muted-foreground"
+              className="h-6 w-6 transition-all duration-300 hover:bg-emerald-50/80 hover:text-emerald-600 hover:scale-110 disabled:hover:scale-100 disabled:hover:bg-transparent disabled:hover:text-muted-foreground"
               onClick={handleIncreaseQuantity}
               disabled={quantity >= product.inventory}
             >

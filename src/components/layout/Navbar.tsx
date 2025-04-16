@@ -120,11 +120,11 @@ const Navbar = () => {
               variant="ghost" 
               size="icon" 
               onClick={toggleCart} 
-              className="relative group transition-all duration-300 hover:bg-green-50 hover:text-green-600 hover:scale-110"
+              className="relative group transition-all duration-300 hover:bg-emerald-50/80 hover:text-emerald-600 hover:scale-110"
             >
               <ShoppingBag size={20} className="transition-transform duration-300 group-hover:rotate-12" />
               {itemCount > 0 && (
-                <span className="absolute -top-1 -right-1 h-4 w-4 rounded-full bg-green-500 text-[10px] font-medium text-white flex items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:bg-green-600">
+                <span className="absolute -top-1 -right-1 h-4 w-4 rounded-full bg-emerald-500 text-[10px] font-medium text-white flex items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:bg-emerald-600">
                   {itemCount}
                 </span>
               )}
