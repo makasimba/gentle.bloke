@@ -8,6 +8,7 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import Autoplay from 'embla-carousel-autoplay';
 import type { EmblaCarouselType } from 'embla-carousel';
+import { useScrollRestoration } from "@/hooks/useScrollRestoration";
 
 const Index = () => {
   const featuredProducts = getFeaturedProducts();
@@ -22,6 +23,9 @@ const Index = () => {
       playOnInit: true
     })
   );
+
+  // Use scroll restoration for the main page
+  useScrollRestoration(() => true);
 
   useEffect(() => {
     if (!api) return;

@@ -25,7 +25,7 @@ const ProductDetail = ({ product }: ProductDetailProps) => {
   const [currentImage, setCurrentImage] = useState(0);
   const [isImageLoading, setIsImageLoading] = useState(true);
   const { addToCart } = useCart();
-  
+
   // Scroll to top of page when component mounts
   useEffect(() => {
     window.scrollTo(0, 0);
