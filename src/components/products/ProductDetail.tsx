@@ -159,26 +159,28 @@ const ProductDetail = ({ product }: ProductDetailProps) => {
 
         {/* Quantity selector and add to cart button */}
         <div className="flex flex-col gap-4">
-          <div className="flex items-center">
+          <div className="flex items-center gap-1">
             <Button
-              variant="outline"
+              variant="ghost"
               size="icon"
+              className="h-6 w-6 transition-all duration-300 hover:bg-green-50 hover:text-green-600 hover:scale-110 disabled:hover:scale-100 disabled:hover:bg-transparent disabled:hover:text-muted-foreground"
               onClick={handleDecreaseQuantity}
-              disabled={quantity === 1}
-              className="h-10 w-10"
+              disabled={quantity <= 1}
             >
-              <Minus size={16} />
+              <Minus size={12} className="transition-transform duration-300 group-hover:rotate-90" />
               <span className="sr-only">Decrease quantity</span>
             </Button>
-            <span className="w-12 text-center font-medium">{quantity}</span>
+            
+            <span className="w-6 text-center text-sm">{quantity}</span>
+            
             <Button
-              variant="outline"
+              variant="ghost"
               size="icon"
+              className="h-6 w-6 transition-all duration-300 hover:bg-green-50 hover:text-green-600 hover:scale-110 disabled:hover:scale-100 disabled:hover:bg-transparent disabled:hover:text-muted-foreground"
               onClick={handleIncreaseQuantity}
               disabled={quantity >= product.inventory}
-              className="h-10 w-10"
             >
-              <Plus size={16} />
+              <Plus size={12} className="transition-transform duration-300 group-hover:rotate-90" />
               <span className="sr-only">Increase quantity</span>
             </Button>
           </div>

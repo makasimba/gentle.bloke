@@ -116,10 +116,15 @@ const Navbar = () => {
 
           {/* Shopping Cart */}
           <div className="ml-4">
-            <Button variant="ghost" size="icon" onClick={toggleCart} className="relative">
-              <ShoppingBag size={20} />
+            <Button 
+              variant="ghost" 
+              size="icon" 
+              onClick={toggleCart} 
+              className="relative group transition-all duration-300 hover:bg-green-50 hover:text-green-600 hover:scale-110"
+            >
+              <ShoppingBag size={20} className="transition-transform duration-300 group-hover:rotate-12" />
               {itemCount > 0 && (
-                <span className="absolute -top-1 -right-1 h-4 w-4 rounded-full bg-green-500 text-[10px] font-medium text-white flex items-center justify-center">
+                <span className="absolute -top-1 -right-1 h-4 w-4 rounded-full bg-green-500 text-[10px] font-medium text-white flex items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:bg-green-600">
                   {itemCount}
                 </span>
               )}
