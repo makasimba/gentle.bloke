@@ -93,6 +93,11 @@ export const getFeaturedProducts = (): Product[] => {
 
 // Helper function to get products by category
 export const getProductsByCategory = (category: string): Product[] => {
+  // If category is empty or "all", return all products
+  if (!category || category === "all") {
+    return products;
+  }
+  // Otherwise filter by the specified category
   return products.filter(product => product.category === category);
 };
 

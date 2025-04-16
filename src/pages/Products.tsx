@@ -1,5 +1,4 @@
-
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { useSearchParams } from "react-router-dom";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
@@ -33,17 +32,17 @@ const Products = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const categoryParam = searchParams.get("category");
   const [filteredProducts, setFilteredProducts] = useState<Product[]>(products);
+  const maxPrice = useMemo(() => Math.max(...products.map((product) => product.price)), [products]);
   const [activeFilters, setActiveFilters] = useState<{
     category: string | null;
     priceRange: [number, number];
   }>({
     category: categoryParam,
-    priceRange: [0, 200],
+    priceRange: [0, maxPrice],
   });
   const [sortOption, setSortOption] = useState("default");
 
   const categories = getCategories();
-  const maxPrice = Math.max(...products.map((product) => product.price));
 
   useEffect(() => {
     // Update active filters when URL parameters change
@@ -60,6 +59,9 @@ const Products = () => {
     // Filter by category
     if (activeFilters.category) {
       result = getProductsByCategory(activeFilters.category);
+    } else {
+      // If no category is selected, show all products
+      result = products;
     }
 
     // Filter by price range
