@@ -4,14 +4,16 @@ import { Button } from "@/components/ui/button";
 import { 
   Minus, 
   Plus, 
-  ShoppingCart,
+  ShoppingBag,
   Truck,
   RotateCcw,
   CheckCircle,
   ChevronLeft,
-  ChevronRight
+  ChevronRight,
+  Check
 } from "lucide-react";
 import { useCart } from "@/context/CartContext";
+import { cn } from "@/lib/utils";
 
 // Props interface for the ProductDetail component
 interface ProductDetailProps {
@@ -24,6 +26,8 @@ const ProductDetail = ({ product }: ProductDetailProps) => {
   const [quantity, setQuantity] = useState(1);
   const [currentImage, setCurrentImage] = useState(0);
   const [isImageLoading, setIsImageLoading] = useState(true);
+  const [isAddingToCart, setIsAddingToCart] = useState(false);
+  const [addedToCart, setAddedToCart] = useState(false);
   const { addToCart } = useCart();
 
   // Scroll to top of page when component mounts
@@ -42,7 +46,19 @@ const ProductDetail = ({ product }: ProductDetailProps) => {
 
   // Cart interaction handler
   const handleAddToCart = () => {
-    addToCart(product, quantity);
+    setIsAddingToCart(true);
+    
+    // Simulate a brief loading state for better UX
+    setTimeout(() => {
+      addToCart(product, quantity);
+      setIsAddingToCart(false);
+      setAddedToCart(true);
+      
+      // Reset the added state after 2 seconds
+      setTimeout(() => {
+        setAddedToCart(false);
+      }, 2000);
+    }, 500);
   };
 
   // Image carousel navigation handlers
@@ -149,16 +165,18 @@ const ProductDetail = ({ product }: ProductDetailProps) => {
               size="icon"
               onClick={handleDecreaseQuantity}
               disabled={quantity === 1}
+              className="h-10 w-10"
             >
               <Minus size={16} />
               <span className="sr-only">Decrease quantity</span>
             </Button>
-            <span className="w-12 text-center">{quantity}</span>
+            <span className="w-12 text-center font-medium">{quantity}</span>
             <Button
               variant="outline"
               size="icon"
               onClick={handleIncreaseQuantity}
               disabled={quantity >= product.inventory}
+              className="h-10 w-10"
             >
               <Plus size={16} />
               <span className="sr-only">Increase quantity</span>
@@ -167,11 +185,49 @@ const ProductDetail = ({ product }: ProductDetailProps) => {
 
           <Button
             onClick={handleAddToCart}
-            className="w-full"
-            disabled={product.inventory === 0}
+            className={cn(
+              "w-full h-12 text-base font-semibold transition-all duration-300 transform focus:outline-none focus:ring-2 focus:ring-offset-2",
+              addedToCart
+                ? "bg-green-600 hover:bg-green-700 focus:ring-green-500"
+                : "bg-store-accent hover:bg-store-accent/90 focus:ring-store-accent"
+            )}
+            disabled={product.inventory === 0 || isAddingToCart}
           >
-            <ShoppingCart className="mr-2 h-4 w-4" />
-            Add to Cart
+            {isAddingToCart ? (
+              <span className="flex items-center justify-center">
+                <svg
+                  className="animate-spin -ml-1 mr-2 h-5 w-5 text-white"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <circle
+                    className="opacity-25"
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke="currentColor"
+                    strokeWidth="4"
+                  ></circle>
+                  <path
+                    className="opacity-75"
+                    fill="currentColor"
+                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                  ></path>
+                </svg>
+                Adding...
+              </span>
+            ) : addedToCart ? (
+              <span className="flex items-center justify-center">
+                <Check className="mr-2 h-5 w-5" />
+                Added to Cart
+              </span>
+            ) : (
+              <span className="flex items-center justify-center">
+                <ShoppingBag className="mr-2 h-5 w-5" />
+                Add to Cart
+              </span>
+            )}
           </Button>
         </div>
 
