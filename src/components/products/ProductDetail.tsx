@@ -93,7 +93,7 @@ const ProductDetail = ({ product }: ProductDetailProps) => {
         
         {/* Thumbnail gallery for multiple product images */}
         {product.images.length > 1 && (
-          <div className="flex gap-2 overflow-auto pb-2 scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-transparent">
+          <div className="flex gap-2 overflow-auto p-2 scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-transparent">
             {product.images.map((image, index) => (
               <button
                 key={index}
