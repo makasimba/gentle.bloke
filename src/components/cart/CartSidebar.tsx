@@ -15,8 +15,8 @@ const CartSidebar = () => {
   const handleWhatsAppCheckout = () => {
     const phoneNumber = "+263771718399";
     const message = encodeURIComponent(
-      `Hi! I would like to place an order:\n\n${cart
-        .map((item) => `${item.product.name} x${item.quantity}`)
+      `Hi! I would like to place an order for:\n\n${cart
+        .map((item) => `${item.product.name} x ${item.quantity}`)
         .join("\n")}\n\nTotal: $${cartTotal.toFixed(2)}`
     );
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
