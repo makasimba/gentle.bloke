@@ -187,10 +187,11 @@ const ProductDetail = ({ product }: ProductDetailProps) => {
             onClick={handleAddToCart}
             className={cn(
               "w-full h-12 text-base font-semibold transition-all duration-300 transform focus:outline-none focus:ring-2 focus:ring-offset-2",
-              "hover:scale-[1.02] active:scale-[0.98]",
+              "hover:scale-[1.01] active:scale-[0.99]",
+              "relative overflow-hidden",
               addedToCart
-                ? "bg-green-600 hover:bg-green-700 focus:ring-green-500 shadow-md hover:shadow-lg"
-                : "bg-store-accent hover:bg-store-accent/90 focus:ring-store-accent shadow-md hover:shadow-lg"
+                ? "bg-green-600 hover:bg-green-700 focus:ring-green-500 shadow-sm hover:shadow"
+                : "bg-store-accent hover:bg-store-accent/90 focus:ring-store-accent shadow-sm hover:shadow"
             )}
             disabled={product.inventory === 0 || isAddingToCart}
           >
@@ -225,8 +226,11 @@ const ProductDetail = ({ product }: ProductDetailProps) => {
               </span>
             ) : (
               <span className="flex items-center justify-center group">
-                <ShoppingBag className="mr-2 h-5 w-5 transition-transform duration-300 group-hover:scale-110" />
-                Add to Cart
+                <ShoppingBag className="mr-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-[-2px] group-hover:translate-y-[-1px]" />
+                <span className="relative">
+                  Add to Cart
+                  <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-amber-300 transition-all duration-300 group-hover:w-full"></span>
+                </span>
               </span>
             )}
           </Button>
