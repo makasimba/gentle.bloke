@@ -6,6 +6,7 @@ import ProductGrid from "@/components/products/ProductGrid";
 import { getFeaturedProducts, getCategories } from "@/lib/data";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import CartSidebar from "@/components/cart/CartSidebar";
 import Autoplay from 'embla-carousel-autoplay';
 import type { EmblaCarouselType } from 'embla-carousel';
 import { useScrollRestoration } from "@/hooks/useScrollRestoration";
@@ -42,6 +43,7 @@ const Index = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
+      <CartSidebar />
       
       <main className="flex-1">
         {/* Hero Section */}
