@@ -87,7 +87,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
             <Button 
               onClick={() => addToCart(product)} 
               size="sm" 
-              className={`bg-white border border-emerald-200 shadow-sm rounded-full w-9 h-9 p-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transform group-hover:translate-y-0 translate-y-2 transition-all duration-300 hover:scale-110 hover:bg-emerald-50/80 hover:border-emerald-300 hover:shadow-md ${isButtonHovered ? 'text-emerald-800' : 'text-emerald-600'}`}
+              className={`bg-white border border-emerald-200 shadow-sm rounded-full w-9 h-9 p-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transform group-hover:translate-y-0 translate-y-2 transition-all duration-300 hover:scale-110 hover:bg-emerald-100 hover:border-emerald-300 hover:shadow-md ${isButtonHovered ? 'text-emerald-800' : 'text-emerald-600'}`}
               variant="ghost"
               aria-label="Add to Cart"
               onMouseEnter={() => {
