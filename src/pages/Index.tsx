@@ -189,7 +189,7 @@ const Index = () => {
               </div>
               <div className="aspect-square overflow-hidden rounded-lg">
                 <img
-                  src="public/images/philosophy__image.jpeg"
+                  src="/images/philosophy__image.jpeg"
                   alt="Farm Machinery"
                   className="w-full h-full object-cover"
                 />
