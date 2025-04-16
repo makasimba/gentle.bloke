@@ -133,7 +133,7 @@ const ProductDetail = ({ product }: ProductDetailProps) => {
 
         {/* Product inventory status and description */}
         <div className="space-y-1">
-          <p className="text-sm text-muted-foreground">
+          <p className="hidden text-sm text-muted-foreground">
             {product.inventory > 0 
               ? `In stock (${product.inventory} available)` 
               : "Out of stock"}
@@ -179,15 +179,15 @@ const ProductDetail = ({ product }: ProductDetailProps) => {
         <div className="rounded-md bg-muted p-4 space-y-3">
           <div className="flex items-center gap-2 text-sm">
             <Truck size={16} className="text-muted-foreground" />
-            <span>Free shipping on orders over $75</span>
+            <span>Free delivery on qualifying large orders</span>
           </div>
           <div className="flex items-center gap-2 text-sm">
             <RotateCcw size={16} className="text-muted-foreground" />
-            <span>Free returns within 30 days</span>
+            <span>Hassle free returns within 30 days</span>
           </div>
           <div className="flex items-center gap-2 text-sm">
             <CheckCircle size={16} className="text-muted-foreground" />
-            <span>Sustainably sourced materials</span>
+            <span>Engineered with rugged materials for everyday farm use</span>
           </div>
         </div>
       </div>
