@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, Search } from "lucide-react";
+import { Menu, Search, ShoppingBag } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -10,9 +10,11 @@ import {
 } from "@/components/ui/sheet";
 import { getCategories } from "@/lib/data";
 import SearchBar from "./SearchBar";
+import { useCart } from "@/context/CartContext";
 
 const Navbar = () => {
   const categories = getCategories();
+  const { toggleCart, itemCount } = useCart();
 
   return (
     <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur">
@@ -109,6 +111,19 @@ const Navbar = () => {
             <Button variant="ghost" size="icon">
               <Search size={20} />
               <span className="sr-only">Search</span>
+            </Button>
+          </div>
+
+          {/* Shopping Cart */}
+          <div className="ml-4">
+            <Button variant="ghost" size="icon" onClick={toggleCart} className="relative">
+              <ShoppingBag size={20} />
+              {itemCount > 0 && (
+                <span className="absolute -top-1 -right-1 h-4 w-4 rounded-full bg-green-500 text-[10px] font-medium text-white flex items-center justify-center">
+                  {itemCount}
+                </span>
+              )}
+              <span className="sr-only">Shopping cart</span>
             </Button>
           </div>
         </div>

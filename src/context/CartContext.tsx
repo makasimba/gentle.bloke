@@ -80,11 +80,11 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
         <Button 
           variant="outline" 
           size="sm" 
-          className="bg-white text-green-500 hover:bg-green-50"
+          className="bg-white text-green-700 hover:bg-green-50 border-white h-8 px-2"
           onClick={() => setIsCartOpen(true)}
         >
-          <ShoppingCart className="mr-2 h-4 w-4" />
-          View Cart
+          <ShoppingCart className="mr-1 h-3 w-3" />
+          View
         </Button>
       ),
     });
