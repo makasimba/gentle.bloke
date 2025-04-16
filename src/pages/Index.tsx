@@ -59,7 +59,7 @@ const Index = () => {
                 <div className="relative h-[70vh] bg-store-secondary">
                   <div className="absolute inset-0">
                     <img
-                      src="/images/carousel__header__III.jpeg"
+                      src="/images/carousel__header__III.webp"
                       alt="Cartoon of three folks with a farm in the background"
                       className="w-full h-full object-cover object-center"
                       loading="lazy"
@@ -90,7 +90,7 @@ const Index = () => {
                 <div className="relative h-[70vh] bg-store-secondary">
                   <div className="absolute inset-0">
                     <img
-                      src="/images/carousel__header__II.jpeg"
+                      src="/images/carousel__header__II.webp"
                       alt="Farm equipment in a field"
                       className="w-full h-full object-cover object-center"
                       loading="lazy"
@@ -121,7 +121,7 @@ const Index = () => {
                 <div className="relative h-[70vh] bg-store-secondary">
                   <div className="absolute inset-0">
                     <img
-                      src="/images/carousel__header__I.jpeg"
+                      src="/images/carousel__header__I.webp"
                       alt="Sustainable farming practices"
                       className="w-full h-full object-cover object-center"
                       loading="lazy"
@@ -189,7 +189,7 @@ const Index = () => {
               </div>
               <div className="aspect-square overflow-hidden rounded-lg">
                 <img
-                  src="/images/philosophy__image.jpeg"
+                  src="/images/philosophy__image.webp"
                   alt="Farm Machinery"
                   className="w-full h-full object-cover"
                 />
