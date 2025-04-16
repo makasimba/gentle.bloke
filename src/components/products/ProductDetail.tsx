@@ -187,9 +187,10 @@ const ProductDetail = ({ product }: ProductDetailProps) => {
             onClick={handleAddToCart}
             className={cn(
               "w-full h-12 text-base font-semibold transition-all duration-300 transform focus:outline-none focus:ring-2 focus:ring-offset-2",
+              "hover:scale-[1.02] active:scale-[0.98]",
               addedToCart
-                ? "bg-green-600 hover:bg-green-700 focus:ring-green-500"
-                : "bg-store-accent hover:bg-store-accent/90 focus:ring-store-accent"
+                ? "bg-green-600 hover:bg-green-700 focus:ring-green-500 shadow-md hover:shadow-lg"
+                : "bg-store-accent hover:bg-store-accent/90 focus:ring-store-accent shadow-md hover:shadow-lg"
             )}
             disabled={product.inventory === 0 || isAddingToCart}
           >
@@ -223,8 +224,8 @@ const ProductDetail = ({ product }: ProductDetailProps) => {
                 Added to Cart
               </span>
             ) : (
-              <span className="flex items-center justify-center">
-                <ShoppingBag className="mr-2 h-5 w-5" />
+              <span className="flex items-center justify-center group">
+                <ShoppingBag className="mr-2 h-5 w-5 transition-transform duration-300 group-hover:scale-110" />
                 Add to Cart
               </span>
             )}
