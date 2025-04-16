@@ -13,16 +13,20 @@ import {
 } from "lucide-react";
 import { useCart } from "@/context/CartContext";
 
+// Props interface for the ProductDetail component
 interface ProductDetailProps {
   product: Product;
 }
 
+// ProductDetail component displays detailed information about a single product
 const ProductDetail = ({ product }: ProductDetailProps) => {
+  // State for quantity selection, image carousel, and loading state
   const [quantity, setQuantity] = useState(1);
   const [currentImage, setCurrentImage] = useState(0);
   const [isImageLoading, setIsImageLoading] = useState(true);
   const { addToCart } = useCart();
   
+  // Quantity adjustment handlers
   const handleDecreaseQuantity = () => {
     setQuantity((prev) => (prev > 1 ? prev - 1 : 1));
   };
@@ -31,10 +35,12 @@ const ProductDetail = ({ product }: ProductDetailProps) => {
     setQuantity((prev) => (prev < product.inventory ? prev + 1 : prev));
   };
 
+  // Cart interaction handler
   const handleAddToCart = () => {
     addToCart(product, quantity);
   };
 
+  // Image carousel navigation handlers
   const handlePreviousImage = () => {
     setCurrentImage((prev) => 
       prev === 0 ? product.images.length - 1 : prev - 1
@@ -51,7 +57,9 @@ const ProductDetail = ({ product }: ProductDetailProps) => {
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16">
+      {/* Product image gallery section */}
       <div className="space-y-4">
+        {/* Main product image with navigation controls */}
         <div className="relative aspect-square overflow-hidden rounded-lg border bg-gray-100">
           <img
             src={product.images[currentImage]}
@@ -62,6 +70,7 @@ const ProductDetail = ({ product }: ProductDetailProps) => {
             onLoad={() => setIsImageLoading(false)}
           />
           
+          {/* Image navigation buttons (only shown when multiple images exist) */}
           {product.images.length > 1 && (
             <>
               <button
@@ -82,6 +91,7 @@ const ProductDetail = ({ product }: ProductDetailProps) => {
           )}
         </div>
         
+        {/* Thumbnail gallery for multiple product images */}
         {product.images.length > 1 && (
           <div className="flex gap-2 overflow-auto pb-2 scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-transparent">
             {product.images.map((image, index) => (
@@ -108,12 +118,15 @@ const ProductDetail = ({ product }: ProductDetailProps) => {
         )}
       </div>
 
+      {/* Product information section */}
       <div className="space-y-6">
+        {/* Product name and price */}
         <div>
           <h1 className="text-2xl font-medium md:text-3xl">{product.name}</h1>
           <p className="mt-1 text-xl font-medium">${product.price.toFixed(2)}</p>
         </div>
 
+        {/* Product inventory status and description */}
         <div className="space-y-1">
           <p className="text-sm text-muted-foreground">
             {product.inventory > 0 
@@ -123,6 +136,7 @@ const ProductDetail = ({ product }: ProductDetailProps) => {
           <p className="text-base">{product.description}</p>
         </div>
 
+        {/* Quantity selector and add to cart button */}
         <div className="flex flex-col gap-4">
           <div className="flex items-center">
             <Button
@@ -156,6 +170,7 @@ const ProductDetail = ({ product }: ProductDetailProps) => {
           </Button>
         </div>
 
+        {/* Product policies and features */}
         <div className="rounded-md bg-muted p-4 space-y-3">
           <div className="flex items-center gap-2 text-sm">
             <Truck size={16} className="text-muted-foreground" />
