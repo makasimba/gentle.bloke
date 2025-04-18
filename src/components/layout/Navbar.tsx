@@ -84,12 +84,6 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-4 ml-auto">
             <Link
-              to="/"
-              className="text-sm font-medium transition-colors hover:text-foreground/80"
-            >
-              Home
-            </Link>
-            <Link
               to="/products"
               className="text-sm font-medium transition-colors hover:text-foreground/80"
             >
