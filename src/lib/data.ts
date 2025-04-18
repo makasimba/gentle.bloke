@@ -15,7 +15,7 @@ export interface CartItem {
   quantity: number;
 }
 
-// Mock product data
+// Product data
 export const products: Product[] = [
   {
     id: "1",
@@ -34,7 +34,7 @@ export const products: Product[] = [
   },
   {
     id: "2",
-    name: "Milking Can",
+    name: "Milk Can",
     description: "A durable, food-grade stainless steel milking can designed for safe and efficient milk collection, storage, and transport. Rust-resistant and easy to clean, it's an essential tool for dairy farmers who value hygiene, longevity, and reliability in their daily operations.",    
     price: 90,
     previousPrice: 120,

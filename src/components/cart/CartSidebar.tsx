@@ -13,7 +13,7 @@ const CartSidebar = () => {
 
   // Function to handle WhatsApp checkout
   const handleWhatsAppCheckout = () => {
-    const phoneNumber = "+263771718399";
+    const phoneNumber = "+263773389320";
     const message = encodeURIComponent(
       `Hi! I would like to place an order for:\n\n${cart
         .map((item) => `${item.product.name} x ${item.quantity}`)
@@ -80,7 +80,7 @@ const CartSidebar = () => {
                 <span>${cartTotal.toFixed(2)}</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-muted-foreground">Shipping</span>
+                <span className="text-muted-foreground">Delivery</span>
                 <span>Calculated at checkout</span>
               </div>
               <Separator />
@@ -93,7 +93,7 @@ const CartSidebar = () => {
             {/* Action buttons */}
             <div className="space-y-2">
               <Button 
-                className="w-full bg-green-500 hover:bg-green-600"
+                className="w-full bg-green-500 hover:bg-green-600 text-white"
                 onClick={handleWhatsAppCheckout}
               >
                 Continue with WhatsApp Checkout
