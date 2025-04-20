@@ -169,7 +169,7 @@ const Index = () => {
         </section>
 
         {/* About Section */}
-        <section className="py-16">
+        <section className="py-16 hidden">
           <div className="store-container">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <div>
