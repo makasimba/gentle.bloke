@@ -1,6 +1,6 @@
 import type { Config } from "tailwindcss";
 
-export default {
+const config: Config = {
 	darkMode: ["class"],
 	content: [
 		"./pages/**/*.{ts,tsx}",
@@ -122,8 +122,21 @@ export default {
 				'slide-out-right': 'slide-out-right 0.3s ease-out',
 				'badge-appear': 'badge-appear 0.2s ease-out',
 				'count-update': 'count-update 0.2s ease-out'
-			}
+			},
+			screens: {
+				'xs': '475px',
+			},
+			spacing: {
+				'18': '4.5rem',
+				'112': '28rem',
+				'128': '32rem',
+			},
+			transitionDuration: {
+				'400': '400ms',
+			},
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
 } satisfies Config;
+
+export default config;
