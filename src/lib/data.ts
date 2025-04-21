@@ -2,6 +2,7 @@ export interface Product {
   id: string;
   name: string;
   description: string;
+  conciseDescription: string;
   price: number;
   previousPrice?: number;
   images: string[];
@@ -21,6 +22,7 @@ export const products: Product[] = [
     id: "1",
     name: "Single Barrel Milking Machine",
     description: "A reliable and efficient milking solution designed for small to medium dairy farms. This single barrel milking machine streamlines the milking process, reducing labor while ensuring gentle and hygienic extraction. Built for durability and ease of use, it's ideal for farmers seeking consistency, speed, and animal comfort in daily operations.",    
+    conciseDescription: "Efficient milking solution for small to medium dairy farms.",
     price: 750,
     previousPrice: 850,
     images: [
@@ -36,6 +38,7 @@ export const products: Product[] = [
     id: "2",
     name: "Milk Can",
     description: "A durable, food-grade stainless steel milking can designed for safe and efficient milk collection, storage, and transport. Rust-resistant and easy to clean, it's an essential tool for dairy farmers who value hygiene, longevity, and reliability in their daily operations.",    
+    conciseDescription: "Durable stainless steel can for safe milk collection and storage.",
     price: 90,
     previousPrice: 120,
     images: [
@@ -52,6 +55,7 @@ export const products: Product[] = [
     id: "3",
     name: "Double Barrel Milking Machine",
     description: "Engineered for efficiency, this double barrel milking machine is ideal for dairy farms with higher output needs. It allows simultaneous milking of two cows, cutting down milking time while maintaining animal comfort and hygiene. Built with robust components for long-term use, it's a smart investment for scaling up your dairy operations.",    
+    conciseDescription: "Double barrel machine for simultaneous milking of two cows.",
     price: 999,
     previousPrice: 1289,
     images: [
@@ -67,6 +71,7 @@ export const products: Product[] = [
     id: "4",
     name: "Cream Separator",
     description: "A high-performance cream separator designed to quickly and efficiently separate cream from milk with precision. Ideal for small to medium dairy operations, it ensures maximum yield and quality while maintaining hygiene and ease of cleaning. Durable, easy to operate, and built for daily use on the farm.",    
+    conciseDescription: "High-performance separator for efficiently separating cream from milk.",
     price: 150,
     previousPrice: 180,
     images: [

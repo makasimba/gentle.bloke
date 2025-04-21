@@ -148,13 +148,23 @@ const ProductDetail = ({ product }: ProductDetailProps) => {
         </div>
 
         {/* Product inventory status and description */}
-        <div className="space-y-1">
-          <p className="hidden text-sm text-muted-foreground">
+        <div className="space-y-3">
+          <p className="text-sm text-muted-foreground">
             {product.inventory > 0 
               ? `In stock (${product.inventory} available)` 
               : "Out of stock"}
           </p>
-          <p className="text-base">{product.description}</p>
+          
+          {/* Concise description */}
+          <div className="bg-muted/50 p-3 rounded-md">
+            <p className="text-base font-medium">{product.conciseDescription}</p>
+          </div>
+          
+          {/* Full description */}
+          <div className="space-y-2">
+            <h3 className="text-sm font-medium text-muted-foreground">Product Details</h3>
+            <p className="text-base">{product.description}</p>
+          </div>
         </div>
 
         {/* Quantity selector and add to cart button */}
