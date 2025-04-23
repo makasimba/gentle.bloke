@@ -32,7 +32,8 @@ const Navbar = () => {
               </SheetTrigger>
               <SheetContent 
                 side="left" 
-                className="w-[280px] sm:w-[320px] p-0 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
+                className="w-[280px] sm:w-[320px] p-0 bg-white border-r"
+                closeButton={false}
               >
                 <div className="flex flex-col h-full">
                   <div className="flex items-center justify-between p-4 border-b">
@@ -42,21 +43,15 @@ const Navbar = () => {
                         alt="ToolMinda Logo"
                         className="h-8 w-auto"
                       />
-                      <span className="text-lg font-semibold">ToolMinda</span>
+                      <span className="text-lg font-semibold text-gray-900">ToolMinda</span>
                     </Link>
-                    <SheetClose asChild>
-                      <Button variant="ghost" size="icon" className="touch-target">
-                        <X size={20} />
-                        <span className="sr-only">Close menu</span>
-                      </Button>
-                    </SheetClose>
                   </div>
-                  <nav className="flex-1 overflow-y-auto p-4">
-                    <div className="flex flex-col gap-4">
+                  <nav className="flex-1 overflow-y-auto">
+                    <div className="flex flex-col">
                       <SheetClose asChild>
                         <Link
                           to="/"
-                          className="text-lg font-medium transition-colors hover:text-foreground/80 active:scale-95 touch-target"
+                          className="px-4 py-3 text-base font-medium text-gray-900 hover:bg-gray-100 active:bg-gray-200 transition-colors border-b"
                         >
                           Home
                         </Link>
@@ -64,7 +59,7 @@ const Navbar = () => {
                       <SheetClose asChild>
                         <Link
                           to="/products"
-                          className="text-lg font-medium transition-colors hover:text-foreground/80 active:scale-95 touch-target"
+                          className="px-4 py-3 text-base font-medium text-gray-900 hover:bg-gray-100 active:bg-gray-200 transition-colors border-b"
                         >
                           All Products
                         </Link>
@@ -73,7 +68,7 @@ const Navbar = () => {
                         <SheetClose key={category} asChild>
                           <Link
                             to={`/products?category=${category}`}
-                            className="text-lg font-medium transition-colors hover:text-foreground/80 active:scale-95 touch-target"
+                            className="px-4 py-3 text-base font-medium text-gray-900 hover:bg-gray-100 active:bg-gray-200 transition-colors border-b"
                           >
                             {category}
                           </Link>
