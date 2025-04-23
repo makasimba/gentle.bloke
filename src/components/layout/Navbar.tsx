@@ -87,7 +87,7 @@ const Navbar = () => {
           </div>
 
           {/* Logo */}
-          <div className="flex items-center">
+          <div className="flex-1 flex items-center justify-center md:flex-none md:justify-start">
             <Link to="/" className="flex items-center gap-1 touch-target">
               <img
                 src="/images/toolmindavector6.svg"
