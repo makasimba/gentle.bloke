@@ -42,7 +42,7 @@ const Navbar = () => {
                         alt="ToolMinda Logo"
                         className="h-8 w-auto"
                       />
-                      <span className="text-lg font-semibold text-gray-900">ToolMinda</span>
+                      <span className="text-lg font-semibold text-green-900">ToolMinda</span>
                     </Link>
                   </div>
                   <nav className="flex-1 overflow-y-auto">
