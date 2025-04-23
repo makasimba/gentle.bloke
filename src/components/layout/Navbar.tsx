@@ -33,13 +33,12 @@ const Navbar = () => {
               <SheetContent 
                 side="left" 
                 className="w-[280px] sm:w-[320px] p-0 bg-white border-r"
-                closeButton={false}
               >
                 <div className="flex flex-col h-full">
                   <div className="flex items-center justify-between p-4 border-b">
                     <Link to="/" className="flex items-center gap-2">
                       <img
-                        src="/images/toolmindavector6.svg"
+                        src="/images/no__bg__toolminda__logo.svg"
                         alt="ToolMinda Logo"
                         className="h-8 w-auto"
                       />
@@ -85,7 +84,7 @@ const Navbar = () => {
           <div className="flex-1 flex items-center justify-center md:flex-none md:justify-start">
             <Link to="/" className="flex items-center gap-1 touch-target">
               <img
-                src="/images/toolmindavector6.svg"
+                src="/images/no__bg__toolminda__logo.svg"
                 alt="ToolMinda Logo"
                 className="h-10 w-auto md:h-12"
               />
