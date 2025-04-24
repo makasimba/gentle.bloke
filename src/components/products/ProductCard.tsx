@@ -62,7 +62,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
             to={`/product/${product.id}`}
             className="block mb-2"
           >
-            <h3 className="font-medium text-gray-800 group-hover:text-store-primary transition-colors duration-300 line-clamp-1">{product.name}</h3>
+            <h5 className="font-medium text-gray-800 group-hover:text-store-primary transition-colors duration-300 line-clamp-1">{product.name}</h5>
           </Link>
           {/* Concise product description */}
           <p className="text-sm text-gray-600 mb-4 line-clamp-2 group-hover:line-clamp-3 transition-all duration-300">

@@ -89,6 +89,43 @@ export const products: Product[] = [
     featured: true,
     inventory: 20
   },
+  {
+    id: "5",
+    name: "Planter",
+    description: "A rugged single-row precision planter engineered for small to medium-scale farms. Ideal for direct seeding of crops like maize, beans, soya, and groundnuts, it ensures uniform seed placement and spacing. Built for durability, this hand-push unit reduces planting time, improves efficiency, and operates without fuel or electricity.",    
+    conciseDescription: "Manual precision planter for uniform seed spacing and faster planting.",
+    price: 150,
+    previousPrice: 280,
+    images: [
+      "/images/VP__12.webp",
+      "/images/VP__13.webp",
+      "/images/VP__17.webp",
+      "/images/VP__10.webp",
+      "/images/VP__11.webp",
+      "/images/VP__9.webp",
+      "/images/VP__5.webp",
+      "/images/VP__2.webp",
+      "/images/VP__1.webp",
+    ],
+    category: "",
+    featured: true,
+    inventory: 10
+  },
+  {
+    id: "6",
+    name: "Vegetable Seeder",
+    description: "A precision vegetable seeder designed to simplify planting for small to medium farms. Delivers consistent seed spacing and depth to improve germination rates and crop uniformity. Lightweight, easy to operate, and ideal for row crops like onions, carrots, beans, and leafy greens.",    
+    conciseDescription: "Precision tool for fast, even vegetable planting.",
+    price: 450,
+    previousPrice: 550,
+    images: [
+      "/images/VS__6.webp",
+      "/images/VS__7.webp",
+    ],
+    category: "",
+    featured: true,
+    inventory: 10
+  },
 ];
 
 // Helper function to get featured products
