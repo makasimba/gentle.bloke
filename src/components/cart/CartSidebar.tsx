@@ -13,7 +13,7 @@ const CartSidebar = () => {
 
   // Function to handle WhatsApp checkout
   const handleWhatsAppCheckout = () => {
-    const phoneNumber = "+263773389320";
+    const phoneNumber = "+263784505460";
     const message = encodeURIComponent(
       `Hi! I would like to place an order for:\n\n${cart
         .map((item) => `${item.product.name} x ${item.quantity}`)
