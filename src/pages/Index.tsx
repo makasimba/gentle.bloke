@@ -47,7 +47,7 @@ const Index = () => {
       
       <main className="flex-1">
         {/* Featured Products */}
-        <section className="py-16">
+        <section className="pt-4 pb-16">
           <div className="store-container">
             <ProductGrid products={featuredProducts} title="Featured Products" />
           </div>
