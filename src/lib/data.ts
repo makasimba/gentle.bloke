@@ -111,21 +111,6 @@ export const products: Product[] = [
     featured: true,
     inventory: 10
   },
-  {
-    id: "6",
-    name: "Vegetable Seeder",
-    description: "A precision vegetable seeder designed to simplify planting for small to medium farms. Delivers consistent seed spacing and depth to improve germination rates and crop uniformity. Lightweight, easy to operate, and ideal for row crops like onions, carrots, beans, and leafy greens.",    
-    conciseDescription: "Precision tool for fast, even vegetable planting.",
-    price: 450,
-    previousPrice: 550,
-    images: [
-      "/images/VS__6.webp",
-      "/images/VS__7.webp",
-    ],
-    category: "",
-    featured: true,
-    inventory: 10
-  },
 ];
 
 // Helper function to get featured products
