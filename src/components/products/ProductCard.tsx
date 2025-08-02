@@ -33,15 +33,6 @@ const ProductCard = ({ product }: ProductCardProps) => {
 
   return (
     <div className="group relative rounded-lg overflow-hidden border border-gray-200 hover:border-gray-300 hover:shadow-md transition-all duration-300 flex flex-col min-h-[420px] bg-white">
-      {/* Discount badge - only shown if product has a previous price */}
-      <div className="absolute top-3 right-3 z-10">
-        {product.previousPrice && (
-          <span className="bg-green-300 text-white text-xs font-medium px-2 py-1">
-            {Math.round((1 - product.price / product.previousPrice) * 100)}% OFF
-          </span>
-        )}
-      </div>
-      
       {/* Product image with link to product detail page */}
       <Link 
         to={`/product/${product.id}`}
