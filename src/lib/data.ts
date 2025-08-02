@@ -23,7 +23,7 @@ export const products: Product[] = [
     name: "Single Barrel Milking Machine",
     description: "A reliable and efficient milking solution designed for small to medium dairy farms. This single barrel milking machine streamlines the milking process, reducing labor while ensuring gentle and hygienic extraction. Built for durability and ease of use, it's ideal for farmers seeking consistency, speed, and animal comfort in daily operations.",    
     conciseDescription: "Efficient milking solution for small to medium dairy farms.",
-    price: 750,
+    price: 700,
     previousPrice: 850,
     images: [
       "/images/s1.webp",
@@ -32,7 +32,7 @@ export const products: Product[] = [
     ],
     category: "",
     featured: true,
-    inventory: 25
+    inventory: 10
   },
   {
     id: "2",
@@ -48,7 +48,7 @@ export const products: Product[] = [
       "/images/MC__XIII.webp"
     ],
     category: "",
-    inventory: 50,
+    inventory: 25,
     featured: true,
   },
   {
@@ -56,7 +56,7 @@ export const products: Product[] = [
     name: "Double Barrel Milking Machine",
     description: "Engineered for efficiency, this double barrel milking machine is ideal for dairy farms with higher output needs. It allows simultaneous milking of two cows, cutting down milking time while maintaining animal comfort and hygiene. Built with robust components for long-term use, it's a smart investment for scaling up your dairy operations.",    
     conciseDescription: "Double barrel machine for simultaneous milking of two cows.",
-    price: 999,
+    price: 950,
     previousPrice: 1289,
     images: [
       "/images/s2.webp",
@@ -65,7 +65,7 @@ export const products: Product[] = [
     ],
     category: "",
     featured: true,
-    inventory: 30
+    inventory: 10
   },
   {
     id: "4",
