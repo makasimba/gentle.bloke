@@ -60,7 +60,7 @@ const Navbar = () => {
                           to="/products"
                           className="px-4 py-3 text-base font-medium text-gray-900 hover:bg-gray-100 active:bg-gray-200 transition-colors border-b"
                         >
-                          All Products
+                          Shop
                         </Link>
                       </SheetClose>
                       {categories.map((category) => (
@@ -105,7 +105,7 @@ const Navbar = () => {
               to="/products"
               className="text-sm font-medium transition-colors hover:text-foreground/80"
             >
-              All Products
+              Shop
             </Link>
             {categories.map((category) => (
               <Link
