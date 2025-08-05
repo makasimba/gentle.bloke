@@ -89,7 +89,7 @@ const Footer = () => {
                    to="/shipping-returns" 
                    className="text-sm text-muted-foreground hover:text-foreground transition-all duration-200 hover:translate-x-1 hover:font-medium"
                  >
-                   Shipping & Returns
+                   Shipping and Returns
                  </Link>
                </li>
                <li>
