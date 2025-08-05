@@ -9,113 +9,113 @@ const Footer = () => {
           <div className="space-y-3">
             <h3 className="text-lg font-medium">ToolMinda</h3>
             <p className="text-sm text-muted-foreground">
-              Empowering african farmers with quality tools, machines and knowledge.
+              Empowering african farmers with high quality tools, machines and knowledge.
             </p>
           </div>
           
           <div className="space-y-3">
             <h3 className="text-sm font-medium">Shop</h3>
             <ul className="space-y-2">
-              <li>
-                <Link 
-                  to="/products" 
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  All Products
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/products?category=Spares" 
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  Spares
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/products?category=Machinery" 
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  Machinery
-                </Link>
-              </li>
+                             <li>
+                 <Link 
+                   to="/products" 
+                   className="text-sm text-muted-foreground hover:text-foreground transition-all duration-200 hover:translate-x-1 hover:font-medium"
+                 >
+                   All Products
+                 </Link>
+               </li>
+               <li>
+                 <Link 
+                   to="/products?category=Spares" 
+                   className="text-sm text-muted-foreground hover:text-foreground transition-all duration-200 hover:translate-x-1 hover:font-medium"
+                 >
+                   Spares
+                 </Link>
+               </li>
+               <li>
+                 <Link 
+                   to="/products?category=Machinery" 
+                   className="text-sm text-muted-foreground hover:text-foreground transition-all duration-200 hover:translate-x-1 hover:font-medium"
+                 >
+                   Machinery
+                 </Link>
+               </li>
             </ul>
           </div>
           
           <div className="space-y-3">
             <h3 className="text-sm font-medium">Company</h3>
             <ul className="space-y-2">
-              <li>
-                <Link 
-                  to="/about-us" 
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/sustainability" 
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  Sustainability
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/press" 
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  Press
-                </Link>
-              </li>
+                             <li>
+                 <Link 
+                   to="/about-us" 
+                   className="text-sm text-muted-foreground hover:text-foreground transition-all duration-200 hover:translate-x-1 hover:font-medium"
+                 >
+                   About Us
+                 </Link>
+               </li>
+               <li>
+                 <Link 
+                   to="/sustainability" 
+                   className="text-sm text-muted-foreground hover:text-foreground transition-all duration-200 hover:translate-x-1 hover:font-medium"
+                 >
+                   Sustainability
+                 </Link>
+               </li>
+               <li>
+                 <Link 
+                   to="/press" 
+                   className="text-sm text-muted-foreground hover:text-foreground transition-all duration-200 hover:translate-x-1 hover:font-medium"
+                 >
+                   Press
+                 </Link>
+               </li>
             </ul>
           </div>
           
           <div className="space-y-3">
             <h3 className="text-sm font-medium">Support</h3>
             <ul className="space-y-2">
-              <li>
-                <Link 
-                  to="/help-center" 
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  Help Center
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/shipping-returns" 
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  Shipping & Returns
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/contact" 
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  Contact Us
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/privacy-policy" 
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/terms-of-service" 
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  Terms of Service
-                </Link>
-              </li>
+                             <li>
+                 <Link 
+                   to="/help-center" 
+                   className="text-sm text-muted-foreground hover:text-foreground transition-all duration-200 hover:translate-x-1 hover:font-medium"
+                 >
+                   Help Center
+                 </Link>
+               </li>
+               <li>
+                 <Link 
+                   to="/shipping-returns" 
+                   className="text-sm text-muted-foreground hover:text-foreground transition-all duration-200 hover:translate-x-1 hover:font-medium"
+                 >
+                   Shipping & Returns
+                 </Link>
+               </li>
+               <li>
+                 <Link 
+                   to="/contact" 
+                   className="text-sm text-muted-foreground hover:text-foreground transition-all duration-200 hover:translate-x-1 hover:font-medium"
+                 >
+                   Contact Us
+                 </Link>
+               </li>
+               <li>
+                 <Link 
+                   to="/privacy-policy" 
+                   className="text-sm text-muted-foreground hover:text-foreground transition-all duration-200 hover:translate-x-1 hover:font-medium"
+                 >
+                   Privacy Policy
+                 </Link>
+               </li>
+               <li>
+                 <Link 
+                   to="/terms-of-service" 
+                   className="text-sm text-muted-foreground hover:text-foreground transition-all duration-200 hover:translate-x-1 hover:font-medium"
+                 >
+                   Terms of Service
+                 </Link>
+               </li>
             </ul>
           </div>
         </div>
