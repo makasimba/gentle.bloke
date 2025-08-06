@@ -31,10 +31,10 @@ const Footer = () => {
                </li>
                <li>
                  <Link 
-                   to="/products?category=Spares" 
+                   to="/products?category=Accessories" 
                    className="text-sm text-muted-foreground hover:text-foreground transition-all duration-200 hover:translate-x-1 hover:font-medium"
                  >
-                   Spares
+                   Parts and Accessories
                  </Link>
                </li>
                <li>
