@@ -87,7 +87,11 @@ const PrivacyPolicy = () => {
               
               <div className="space-y-6">
                 <div className="flex items-start">
-                  <div className="w-8 h-8 bg-emerald-600 text-white rounded-xl flex items-center justify-center mr-4 flex-shrink-0 text-sm font-medium">1</div>
+                  <div className="w-10 h-10 bg-emerald-100 rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
+                    <svg className="w-5 h-5 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+                    </svg>
+                  </div>
                   <div>
                     <h4 className="font-medium text-slate-800 mb-2">Order Fulfillment</h4>
                     <p className="text-slate-600 leading-relaxed font-light text-sm">To process and deliver your orders, send order confirmations, and provide customer support.</p>
@@ -95,7 +99,11 @@ const PrivacyPolicy = () => {
                 </div>
                 
                 <div className="flex items-start">
-                  <div className="w-8 h-8 bg-emerald-600 text-white rounded-xl flex items-center justify-center mr-4 flex-shrink-0 text-sm font-medium">2</div>
+                  <div className="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
+                    <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+                    </svg>
+                  </div>
                   <div>
                     <h4 className="font-medium text-slate-800 mb-2">Customer Service</h4>
                     <p className="text-slate-600 leading-relaxed font-light text-sm">To respond to your inquiries, provide technical support, and improve our customer experience.</p>
@@ -103,7 +111,11 @@ const PrivacyPolicy = () => {
                 </div>
                 
                 <div className="flex items-start">
-                  <div className="w-8 h-8 bg-emerald-600 text-white rounded-xl flex items-center justify-center mr-4 flex-shrink-0 text-sm font-medium">3</div>
+                  <div className="w-10 h-10 bg-purple-100 rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
+                    <svg className="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                    </svg>
+                  </div>
                   <div>
                     <h4 className="font-medium text-slate-800 mb-2">Website Improvement</h4>
                     <p className="text-slate-600 leading-relaxed font-light text-sm">To analyze usage patterns, optimize our website, and enhance user experience.</p>
@@ -111,7 +123,12 @@ const PrivacyPolicy = () => {
                 </div>
                 
                 <div className="flex items-start">
-                  <div className="w-8 h-8 bg-emerald-600 text-white rounded-xl flex items-center justify-center mr-4 flex-shrink-0 text-sm font-medium">4</div>
+                  <div className="w-10 h-10 bg-orange-100 rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
+                    <svg className="w-5 h-5 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z" />
+                    </svg>
+                  </div>
                   <div>
                     <h4 className="font-medium text-slate-800 mb-2">Marketing (with consent)</h4>
                     <p className="text-slate-600 leading-relaxed font-light text-sm">To send promotional emails and updates about new products and services.</p>

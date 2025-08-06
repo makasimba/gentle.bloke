@@ -32,7 +32,8 @@ const HelpCenter = () => {
                   <div className="flex items-center mb-6">
                     <div className="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center mr-4 group-hover:bg-emerald-200 transition-colors duration-300">
                       <svg className="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.99l-.318.158a6 6 0 01-3.86.99l-.318-.158a6 6 0 00-3.86-.99l-2.387.477a2 2 0 00-1.022.547A2 2 0 004 17v3a2 2 0 002 2h12a2 2 0 002-2v-3a2 2 0 00-.572-1.555z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                       </svg>
                     </div>
                     <h3 className="text-xl font-medium text-slate-800">Product Selection</h3>
@@ -81,8 +82,8 @@ const HelpCenter = () => {
 
                 <div className="group bg-white/70 backdrop-blur-sm rounded-2xl shadow-sm border border-slate-200/50 p-8 transition-all duration-300 hover:shadow-md hover:scale-[1.02]">
                   <div className="flex items-center mb-6">
-                    <div className="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center mr-4 group-hover:bg-orange-200 transition-colors duration-300">
-                      <svg className="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div className="w-12 h-12 bg-indigo-100 rounded-xl flex items-center justify-center mr-4 group-hover:bg-indigo-200 transition-colors duration-300">
+                      <svg className="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-.553.894L15 16M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
                       </svg>
                     </div>
@@ -91,7 +92,7 @@ const HelpCenter = () => {
                   <p className="text-slate-600 leading-relaxed font-light mb-4">
                     How to request a demonstration of our products at your farm.
                   </p>
-                  <a href="#" className="text-orange-600 hover:text-orange-700 font-medium group-hover:underline transition-colors duration-300">
+                  <a href="#" className="text-indigo-600 hover:text-indigo-700 font-medium group-hover:underline transition-colors duration-300">
                     Request demo →
                   </a>
                 </div>
