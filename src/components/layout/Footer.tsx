@@ -7,7 +7,12 @@ const Footer = () => {
       <div className="store-container py-10 md:py-12">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           <div className="space-y-3">
-            <h3 className="text-lg font-medium">ToolMinda</h3>
+            <Link 
+              to="/about-us" 
+              className="text-lg font-medium hover:text-foreground transition-colors cursor-pointer"
+            >
+              ToolMinda
+            </Link>
             <p className="text-sm text-muted-foreground">
               Empowering african farmers with high quality tools, machines and knowledge.
             </p>
@@ -16,7 +21,7 @@ const Footer = () => {
           <div className="space-y-3">
             <h3 className="text-sm font-medium">Shop</h3>
             <ul className="space-y-2">
-                             <li>
+               <li>
                  <Link 
                    to="/products" 
                    className="text-sm text-muted-foreground hover:text-foreground transition-all duration-200 hover:translate-x-1 hover:font-medium"
@@ -38,36 +43,6 @@ const Footer = () => {
                    className="text-sm text-muted-foreground hover:text-foreground transition-all duration-200 hover:translate-x-1 hover:font-medium"
                  >
                    Machinery
-                 </Link>
-               </li>
-            </ul>
-          </div>
-          
-          <div className="space-y-3">
-            <h3 className="text-sm font-medium">Company</h3>
-            <ul className="space-y-2">
-                             <li>
-                 <Link 
-                   to="/about-us" 
-                   className="text-sm text-muted-foreground hover:text-foreground transition-all duration-200 hover:translate-x-1 hover:font-medium"
-                 >
-                   About Us
-                 </Link>
-               </li>
-               <li>
-                 <Link 
-                   to="/sustainability" 
-                   className="text-sm text-muted-foreground hover:text-foreground transition-all duration-200 hover:translate-x-1 hover:font-medium"
-                 >
-                   Sustainability
-                 </Link>
-               </li>
-               <li>
-                 <Link 
-                   to="/press" 
-                   className="text-sm text-muted-foreground hover:text-foreground transition-all duration-200 hover:translate-x-1 hover:font-medium"
-                 >
-                   Press
                  </Link>
                </li>
             </ul>
@@ -121,9 +96,12 @@ const Footer = () => {
         </div>
         
         <div className="mt-10 border-t pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-xs text-muted-foreground">
+          <Link 
+            to="/about-us" 
+            className="text-xs text-muted-foreground hover:text-foreground transition-colors"
+          >
             © {new Date().getFullYear()} ToolMinda. All rights reserved.
-          </p>
+          </Link>
           <div className="flex gap-4">
             <a 
               href={`https://wa.me/+263784505460?text=${encodeURIComponent("Hi ToolMinda! I have a question about your products.")}`}
