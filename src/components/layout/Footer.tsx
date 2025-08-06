@@ -4,27 +4,29 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer className="bg-gradient-to-b from-green-50 to-green-100/50 border-t">
-      <div className="store-container py-10 md:py-12">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
-          <div className="space-y-3">
+      <div className="store-container py-8 sm:py-10 md:py-12 px-4 sm:px-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+          {/* Company Info */}
+          <div className="space-y-4 sm:space-y-3">
             <Link 
               to="/about-us" 
-              className="text-lg font-medium hover:text-foreground transition-colors cursor-pointer"
+              className="text-lg sm:text-xl font-medium hover:text-foreground transition-colors cursor-pointer block"
             >
               ToolMinda
             </Link>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-muted-foreground leading-relaxed">
               Empowering african farmers with high quality tools, machines and knowledge.
             </p>
           </div>
           
-          <div className="space-y-3">
+          {/* Shop Links */}
+          <div className="space-y-4 sm:space-y-3">
             <h3 className="text-sm font-medium">Shop</h3>
-            <ul className="space-y-2">
+            <ul className="space-y-3 sm:space-y-2">
                <li>
                  <Link 
                    to="/products" 
-                   className="text-sm text-muted-foreground hover:text-foreground transition-all duration-200 hover:translate-x-1 hover:font-medium"
+                   className="text-sm text-muted-foreground hover:text-foreground transition-all duration-200 hover:translate-x-1 hover:font-medium block py-1"
                  >
                    All Products
                  </Link>
@@ -32,7 +34,7 @@ const Footer = () => {
                <li>
                  <Link 
                    to="/products?category=Accessories" 
-                   className="text-sm text-muted-foreground hover:text-foreground transition-all duration-200 hover:translate-x-1 hover:font-medium"
+                   className="text-sm text-muted-foreground hover:text-foreground transition-all duration-200 hover:translate-x-1 hover:font-medium block py-1"
                  >
                    Parts and Accessories
                  </Link>
@@ -40,7 +42,7 @@ const Footer = () => {
                <li>
                  <Link 
                    to="/products?category=Machinery" 
-                   className="text-sm text-muted-foreground hover:text-foreground transition-all duration-200 hover:translate-x-1 hover:font-medium"
+                   className="text-sm text-muted-foreground hover:text-foreground transition-all duration-200 hover:translate-x-1 hover:font-medium block py-1"
                  >
                    Machinery
                  </Link>
@@ -48,13 +50,14 @@ const Footer = () => {
             </ul>
           </div>
           
-          <div className="space-y-3">
+          {/* Support Links */}
+          <div className="space-y-4 sm:space-y-3">
             <h3 className="text-sm font-medium">Support</h3>
-            <ul className="space-y-2">
+            <ul className="space-y-3 sm:space-y-2">
                              <li>
                  <Link 
                    to="/help-center" 
-                   className="text-sm text-muted-foreground hover:text-foreground transition-all duration-200 hover:translate-x-1 hover:font-medium"
+                   className="text-sm text-muted-foreground hover:text-foreground transition-all duration-200 hover:translate-x-1 hover:font-medium block py-1"
                  >
                    Help Center
                  </Link>
@@ -62,7 +65,7 @@ const Footer = () => {
                <li>
                  <Link 
                    to="/shipping-returns" 
-                   className="text-sm text-muted-foreground hover:text-foreground transition-all duration-200 hover:translate-x-1 hover:font-medium"
+                   className="text-sm text-muted-foreground hover:text-foreground transition-all duration-200 hover:translate-x-1 hover:font-medium block py-1"
                  >
                    Shipping and Returns
                  </Link>
@@ -70,7 +73,7 @@ const Footer = () => {
                <li>
                  <Link 
                    to="/contact" 
-                   className="text-sm text-muted-foreground hover:text-foreground transition-all duration-200 hover:translate-x-1 hover:font-medium"
+                   className="text-sm text-muted-foreground hover:text-foreground transition-all duration-200 hover:translate-x-1 hover:font-medium block py-1"
                  >
                    Contact Us
                  </Link>
@@ -78,7 +81,7 @@ const Footer = () => {
                <li>
                  <Link 
                    to="/privacy-policy" 
-                   className="text-sm text-muted-foreground hover:text-foreground transition-all duration-200 hover:translate-x-1 hover:font-medium"
+                   className="text-sm text-muted-foreground hover:text-foreground transition-all duration-200 hover:translate-x-1 hover:font-medium block py-1"
                  >
                    Privacy Policy
                  </Link>
@@ -86,7 +89,7 @@ const Footer = () => {
                <li>
                  <Link 
                    to="/terms-of-service" 
-                   className="text-sm text-muted-foreground hover:text-foreground transition-all duration-200 hover:translate-x-1 hover:font-medium"
+                   className="text-sm text-muted-foreground hover:text-foreground transition-all duration-200 hover:translate-x-1 hover:font-medium block py-1"
                  >
                    Terms of Service
                  </Link>
@@ -95,24 +98,25 @@ const Footer = () => {
           </div>
         </div>
         
-        <div className="mt-10 border-t pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
+        {/* Bottom Section */}
+        <div className="mt-8 sm:mt-10 border-t pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-6">
           <Link 
             to="/about-us" 
-            className="text-xs text-muted-foreground hover:text-foreground transition-colors"
+            className="text-xs sm:text-sm text-muted-foreground hover:text-foreground transition-colors text-center sm:text-left"
           >
             © {new Date().getFullYear()} ToolMinda. All rights reserved.
           </Link>
-          <div className="flex gap-4">
+          <div className="flex gap-6 sm:gap-4">
             <a 
               href={`https://wa.me/+263784505460?text=${encodeURIComponent("Hi ToolMinda! I have a question about your products.")}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-foreground transition-colors"
+              className="text-muted-foreground hover:text-foreground transition-colors p-2 -m-2 rounded-lg hover:bg-green-100/50"
               aria-label="Contact us on WhatsApp"
             >
               <svg
-                width="20"
-                height="20"
+                width="24"
+                height="24"
                 viewBox="0 0 24 24"
                 fill="currentColor"
                 className="hover:scale-110 transition-transform duration-200"
@@ -125,12 +129,12 @@ const Footer = () => {
               href="https://facebook.com/toolminda"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-foreground transition-colors"
+              className="text-muted-foreground hover:text-foreground transition-colors p-2 -m-2 rounded-lg hover:bg-green-100/50"
               aria-label="Visit our Facebook"
             >
               <svg
-                width="20"
-                height="20"
+                width="24"
+                height="24"
                 viewBox="0 0 24 24"
                 fill="currentColor"
                 className="hover:scale-110 transition-transform duration-200"
@@ -144,12 +148,12 @@ const Footer = () => {
               href="https://instagram.com/toolminda"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-foreground transition-colors"
+              className="text-muted-foreground hover:text-foreground transition-colors p-2 -m-2 rounded-lg hover:bg-green-100/50"
               aria-label="Follow us on Instagram"
             >
               <svg
-                width="20"
-                height="20"
+                width="24"
+                height="24"
                 viewBox="0 0 24 24"
                 fill="currentColor"
                 className="hover:scale-110 transition-transform duration-200"
