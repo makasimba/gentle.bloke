@@ -252,7 +252,7 @@ const ProductDetail = ({ product }: ProductDetailProps) => {
         <div className="rounded-md bg-muted p-4 space-y-3">
           <div className="flex items-center gap-2 text-sm">
             <Truck size={16} className="text-muted-foreground" />
-            <span>Free delivery on qualifying large orders</span>
+            <span>Super affordable delivery on all orders</span>
           </div>
           <div className="flex items-center gap-2 text-sm">
             <RotateCcw size={16} className="text-muted-foreground" />
