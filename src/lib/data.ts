@@ -26,8 +26,8 @@ export const products: Product[] = [
     price: 700,
     previousPrice: 850,
     images: [
-      "/images/s1.webp",
       "/images/s1_detail.webp",
+      "/images/s1.webp",
       "/images/s1_alt.webp"
     ],
     category: "",
