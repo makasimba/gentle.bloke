@@ -26,9 +26,8 @@ export const products: Product[] = [
     price: 700,
     previousPrice: 850,
     images: [
-      "/images/s1_detail.webp",
+      "/images/s1_alt.webp",
       "/images/s1.webp",
-      "/images/s1_alt.webp"
     ],
     category: "",
     featured: true,
@@ -59,9 +58,7 @@ export const products: Product[] = [
     price: 950,
     previousPrice: 1289,
     images: [
-      "/images/s2.webp",
-      "/images/s2_detail.webp",
-      "/images/s2_alt.webp"
+      "/images/s2_alt.webp",
     ],
     category: "",
     featured: true,
