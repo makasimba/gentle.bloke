@@ -3,10 +3,10 @@ import React from "react";
 const AboutUs = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50/30">
-      <div className="store-container py-16 md:py-24">
+      <div className="store-container py-4 md:py-8">
         {/* Header */}
-        <div className="text-center mb-20">
-          <div className="inline-block mb-8">
+        <div className="text-center mb-8">
+          <div className="inline-block mb-4">
             <h1 className="text-5xl md:text-7xl font-light text-slate-800 tracking-tight leading-tight">
               About
             </h1>
@@ -14,7 +14,7 @@ const AboutUs = () => {
               ToolMinda
             </h1>
           </div>
-          <div className="w-24 h-px bg-slate-300 mx-auto mb-8"></div>
+          <div className="w-24 h-px bg-slate-300 mx-auto mb-4"></div>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed font-light">
             Empowering African farmers with quality tools and sustainable solutions for a brighter agricultural future
           </p>
@@ -22,12 +22,12 @@ const AboutUs = () => {
 
         {/* Main Content */}
         <div className="max-w-5xl mx-auto">
-          <div className="space-y-12">
+          <div className="space-y-6">
             {/* Story Section */}
-            <div className="bg-white/70 backdrop-blur-sm rounded-2xl shadow-sm border border-slate-200/50 p-8 md:p-12">
+            <div className="bg-white/70 backdrop-blur-sm rounded-2xl shadow-sm border border-slate-200/50 p-6 md:p-8">
               <div className="prose prose-lg max-w-none">
-                <p className="text-lg text-slate-700 leading-relaxed mb-8 font-light">
-                  At ToolMinda, our mission is to empower small to medium-scale farmers across Sub-Saharan Africa with access to high-quality tools, machinery, and equipment. Founded with the belief that agriculture is the backbone of the continent, we aim to simplify and modernize farming through affordable, durable, and reliable products.
+                <p className="text-lg text-slate-700 leading-relaxed mb-4 font-light">
+                  At ToolMinda, our mission is to empower small to medium-scale farmers across Africa with access to high-quality tools, machinery, and equipment. Founded with the belief that agriculture is the backbone of the continent, we aim to simplify and modernize farming through affordable, durable, and reliable products.
                 </p>
                 
                 <p className="text-lg text-slate-700 leading-relaxed font-light">
