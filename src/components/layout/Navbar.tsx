@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { Menu, Search, ShoppingBag, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -16,6 +16,24 @@ const Navbar = () => {
   const categories = getCategories();
   const { toggleCart, itemCount } = useCart();
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleLogoClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    
+    // If we're already on the home page, just scroll to top
+    if (location.pathname === "/" || location.pathname === "/index") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      // Navigate to home page and scroll to top
+      navigate("/");
+      // Use requestAnimationFrame to ensure navigation completes before scrolling
+      requestAnimationFrame(() => {
+        window.scrollTo({ top: 0, behavior: "instant" });
+      });
+    }
+  };
 
   return (
     <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -36,14 +54,14 @@ const Navbar = () => {
               >
                 <div className="flex flex-col h-full">
                   <div className="flex items-center justify-between p-4 border-b">
-                    <Link to="/" className="flex items-center gap-2">
+                    <button onClick={handleLogoClick} className="flex items-center gap-2 hover:opacity-80 transition-opacity">
                       <img
                         src="/images/no__bg__toolminda__logo.svg"
                         alt="ToolMinda Logo"
                         className="h-8 w-auto"
                       />
                       <span className="text-lg font-semibold text-green-900">ToolMinda</span>
-                    </Link>
+                    </button>
                   </div>
                   <nav className="flex-1 overflow-y-auto">
                     <div className="flex flex-col">
@@ -82,14 +100,14 @@ const Navbar = () => {
 
           {/* Logo */}
           <div className="flex-1 flex items-center justify-center md:flex-none md:justify-start">
-            <Link to="/" className="flex items-center gap-1 touch-target">
+            <button onClick={handleLogoClick} className="flex items-center gap-1 touch-target hover:opacity-80 transition-opacity">
               <img
                 src="/images/no__bg__toolminda__logo.svg"
                 alt="ToolMinda Logo"
                 className="h-10 w-auto md:h-12"
               />
               <span className="text-lg md:text-xl font-semibold tracking-tight hidden sm:inline">ToolMinda</span>
-            </Link>
+            </button>
           </div>
 
           {/* Search Bar - Centered */}
