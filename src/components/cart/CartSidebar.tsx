@@ -16,7 +16,7 @@ const CartSidebar = () => {
     const phoneNumber = "+263784505460";
     const message = encodeURIComponent(
       `Hi! I would like to place an order for:\n\n${cart
-        .map((item) => `${item.product.name} x ${item.quantity}`)
+        .map((item) => `${item.quantity} x ${item.product.name}`)
         .join("\n")}\n\nTotal: $${cartTotal.toFixed(2)}`
     );
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
@@ -41,7 +41,12 @@ const CartSidebar = () => {
         {/* Cart header with title and close button */}
         <div className="flex items-center justify-between p-4 border-b">
           <h2 className="font-medium text-lg">Shopping Cart</h2>
-          <Button variant="ghost" size="icon" onClick={closeCart}>
+          <Button 
+            variant="ghost" 
+            size="icon" 
+            onClick={closeCart}
+            className="hover:bg-green-100 hover:text-green-700 transition-colors duration-200 hover:scale-105"
+          >
             <X size={18} />
             <span className="sr-only">Close cart</span>
           </Button>
