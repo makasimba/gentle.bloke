@@ -35,10 +35,9 @@ export function useScrollRestoration(shouldRestore: (pathname: string) => boolea
           window.scrollTo(0, savedPosition);
         }, 0);
       }
-    } else if (!isMainPage) {
-      // For non-main pages, scroll to top
-      window.scrollTo(0, 0);
     }
+    // Removed the else clause that was scrolling to top for non-main pages
+    // This allows our footer navigation to handle scrolling behavior
   }, [pathname, isMainPage, shouldRestore]);
 
   return scrollRef;

@@ -1,7 +1,25 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 
 const Footer = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleNavigation = (to: string) => {
+    // If navigating to the main page, let the scroll restoration handle it
+    if (to === "/" || to === "/index") {
+      navigate(to);
+      return;
+    }
+
+    // For other pages, navigate and scroll to top instantly
+    navigate(to);
+    // Use requestAnimationFrame to ensure navigation completes before scrolling
+    requestAnimationFrame(() => {
+      window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    });
+  };
+
   return (
     <footer className="bg-gradient-to-b from-green-50 to-green-100/50 border-t">
       <div className="store-container py-8 sm:py-10 md:py-12 px-4 sm:px-6">
@@ -10,6 +28,10 @@ const Footer = () => {
           <div className="space-y-4 sm:space-y-3">
             <Link 
               to="/about-us" 
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavigation("/about-us");
+              }}
               className="text-lg sm:text-xl font-medium hover:text-foreground transition-colors cursor-pointer block"
             >
               ToolMinda
@@ -19,7 +41,7 @@ const Footer = () => {
             </p>
           </div>
           
-          {/* Shop Links */}
+          {/* Shop Links - No scroll to top behavior */}
           <div className="space-y-4 sm:space-y-3">
             <h3 className="text-sm font-medium">Shop</h3>
             <ul className="space-y-3 sm:space-y-2">
@@ -50,13 +72,17 @@ const Footer = () => {
             </ul>
           </div>
           
-          {/* Support Links */}
+          {/* Support Links - Scroll to top behavior */}
           <div className="space-y-4 sm:space-y-3">
             <h3 className="text-sm font-medium">Support</h3>
             <ul className="space-y-3 sm:space-y-2">
                              <li>
                  <Link 
                    to="/help-center" 
+                   onClick={(e) => {
+                     e.preventDefault();
+                     handleNavigation("/help-center");
+                   }}
                    className="text-sm text-muted-foreground hover:text-foreground transition-all duration-200 hover:translate-x-1 hover:font-medium block py-1"
                  >
                    Help Center
@@ -65,6 +91,10 @@ const Footer = () => {
                <li>
                  <Link 
                    to="/shipping-returns" 
+                   onClick={(e) => {
+                     e.preventDefault();
+                     handleNavigation("/shipping-returns");
+                   }}
                    className="text-sm text-muted-foreground hover:text-foreground transition-all duration-200 hover:translate-x-1 hover:font-medium block py-1"
                  >
                    Shipping and Returns
@@ -73,6 +103,10 @@ const Footer = () => {
                <li>
                  <Link 
                    to="/contact" 
+                   onClick={(e) => {
+                     e.preventDefault();
+                     handleNavigation("/contact");
+                   }}
                    className="text-sm text-muted-foreground hover:text-foreground transition-all duration-200 hover:translate-x-1 hover:font-medium block py-1"
                  >
                    Contact Us
@@ -81,6 +115,10 @@ const Footer = () => {
                <li>
                  <Link 
                    to="/privacy-policy" 
+                   onClick={(e) => {
+                     e.preventDefault();
+                     handleNavigation("/privacy-policy");
+                   }}
                    className="text-sm text-muted-foreground hover:text-foreground transition-all duration-200 hover:translate-x-1 hover:font-medium block py-1"
                  >
                    Privacy Policy
@@ -89,6 +127,10 @@ const Footer = () => {
                <li>
                  <Link 
                    to="/terms-of-service" 
+                   onClick={(e) => {
+                     e.preventDefault();
+                     handleNavigation("/terms-of-service");
+                   }}
                    className="text-sm text-muted-foreground hover:text-foreground transition-all duration-200 hover:translate-x-1 hover:font-medium block py-1"
                  >
                    Terms of Service
@@ -102,6 +144,10 @@ const Footer = () => {
         <div className="mt-8 sm:mt-10 border-t pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-6">
           <Link 
             to="/about-us" 
+            onClick={(e) => {
+              e.preventDefault();
+              handleNavigation("/about-us");
+            }}
             className="text-xs sm:text-sm text-muted-foreground hover:text-foreground transition-colors text-center sm:text-left"
           >
             © {new Date().getFullYear()} ToolMinda. All rights reserved.
