@@ -5,6 +5,7 @@ import { Separator } from "@/components/ui/separator";
 import CartItem from "./CartItem";
 import { useCart } from "@/context/CartContext";
 import { Link } from "react-router-dom";
+import { cn } from "@/lib/utils";
 
 // CartSidebar component - Displays a sliding cart panel with items and checkout options
 const CartSidebar = () => {
@@ -68,8 +69,21 @@ const CartSidebar = () => {
               <p className="text-muted-foreground mb-6">
                 Looks like you haven't added anything to your cart yet.
               </p>
-              <Button onClick={closeCart}>
-                Continue Shopping
+              <Button 
+                onClick={closeCart}
+                className={cn(
+                  "w-full h-12 text-base font-semibold transition-all duration-300 transform focus:outline-none focus:ring-2 focus:ring-offset-2",
+                  "hover:scale-[1.01] active:scale-[0.99]",
+                  "relative overflow-hidden group",
+                  "bg-store-accent hover:bg-store-accent/90 focus:ring-store-accent shadow-sm hover:shadow"
+                )}
+              >
+                <span className="flex items-center justify-center">
+                  <span className="relative">
+                    Continue Shopping
+                    <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-amber-300 transition-all duration-300 group-hover:w-full"></span>
+                  </span>
+                </span>
               </Button>
             </div>
           )}
